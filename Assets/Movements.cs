@@ -34,6 +34,12 @@ public class Movements : MonoBehaviour
 
     public void MoveForward()
     {
+        Vector3 ballmove = new Vector3(0.0f, 1.0f, 0.0f);
+        rb.AddForce(ballmove * movespeed);
+    }
+
+    public void MoveSideways()
+    {
         Vector3 ballmove = new Vector3(1.0f, 0.0f, 0.0f);
         rb.AddForce(ballmove * movespeed);
     }

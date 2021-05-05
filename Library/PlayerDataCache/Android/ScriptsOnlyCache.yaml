@@ -2,6 +2,7 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - ChangeColor
+    - Functions
     - GvrEditorEmulator
     - GvrPointerInputModule
     - GvrPointerPhysicsRaycaster
@@ -57,13 +58,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12914}
     - Class: 114
-      Script: {instanceID: 13046}
+      Script: {instanceID: 13018}
     - Class: 114
-      Script: {instanceID: 13426}
+      Script: {instanceID: 13048}
     - Class: 114
-      Script: {instanceID: 13456}
+      Script: {instanceID: 13428}
     - Class: 114
-      Script: {instanceID: 15336}
+      Script: {instanceID: 13458}
+    - Class: 114
+      Script: {instanceID: 14146}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -541,6 +544,12 @@ ScriptsOnlyBuild:
     className: EmulatorManager
   - hash:
       serializedVersion: 2
+      Hash: ced8d260d03a16b1ba81c3d5fc3a435a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Movements
+  - hash:
+      serializedVersion: 2
       Hash: 6939772cb3ce775a8e8d99f332534491
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -778,7 +787,7 @@ ScriptsOnlyBuild:
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: Movements
+    className: Functions
   platform: 13
   scenePathNames:
   - Assets/Scenes/Chess.unity
