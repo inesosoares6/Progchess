@@ -10,7 +10,7 @@ public class Movements : MonoBehaviour
 
     private void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        //rb = GetComponent<Rigidbody>();
     }
 
     private void Update()
@@ -47,6 +47,26 @@ public class Movements : MonoBehaviour
     public void Move1space()
     {
         go.transform.position = go.transform.position + new Vector3(6.0f,0.0f,0.0f);
+    }
+
+    public void MoveCameraForward()
+    {
+        go.transform.position = go.transform.position + new Vector3(0.0f, 0.0f, 6.0f);
+    }
+
+    public void MoveCameraBackwards()
+    {
+        go.transform.position = go.transform.position + new Vector3(0.0f, 0.0f, -6.0f);
+    }
+
+    public void MoveCameraLeft()
+    {
+        go.transform.position = go.transform.position + new Vector3(-6.0f, 0.0f, 0.0f);
+    }
+
+    public void MoveCameraRight()
+    {
+        go.transform.position = go.transform.position + new Vector3(6.0f, 0.0f, 6.0f);
     }
 
     public void increaseCount()
