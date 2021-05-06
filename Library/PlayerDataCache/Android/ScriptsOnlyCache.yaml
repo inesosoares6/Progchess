@@ -8,6 +8,7 @@ ScriptsOnlyBuild:
     - GvrPointerInputModule
     - GvrPointerPhysicsRaycaster
     - GvrReticlePointer
+    - MoveCamera
     - Movements
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
@@ -51,34 +52,32 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11458}
+      Script: {instanceID: 11442}
     - Class: 114
-      Script: {instanceID: 11822}
+      Script: {instanceID: 11460}
     - Class: 114
-      Script: {instanceID: 12076}
+      Script: {instanceID: 11824}
     - Class: 114
-      Script: {instanceID: 12750}
+      Script: {instanceID: 12078}
     - Class: 114
-      Script: {instanceID: 12916}
+      Script: {instanceID: 12752}
     - Class: 114
-      Script: {instanceID: 13020}
+      Script: {instanceID: 12918}
     - Class: 114
-      Script: {instanceID: 13050}
+      Script: {instanceID: 13022}
     - Class: 114
-      Script: {instanceID: 13430}
+      Script: {instanceID: 13052}
     - Class: 114
-      Script: {instanceID: 13460}
+      Script: {instanceID: 13432}
     - Class: 114
-      Script: {instanceID: 20630}
+      Script: {instanceID: 13462}
+    - Class: 114
+      Script: {instanceID: 14214}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
-      Script: {instanceID: 0}
-    - Class: 212
-      Script: {instanceID: 0}
-    - Class: 213
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -129,6 +128,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: AudioPlayableAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 1bb6777237524ac78d22faf8f0a9a518
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CubePosition
   - hash:
       serializedVersion: 2
       Hash: b4fc42b020df4b67385e61ff21d513cc
@@ -797,10 +802,10 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: 1bb6777237524ac78d22faf8f0a9a518
+      Hash: e55061dd3b4957a26362ea425ebed889
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: CubePosition
+    className: MoveCamera
   platform: 13
   scenePathNames:
   - Assets/Scenes/Chess.unity

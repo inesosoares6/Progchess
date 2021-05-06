@@ -44,29 +44,24 @@ public class Movements : MonoBehaviour
         rb.AddForce(ballmove * movespeed);
     }
 
-    public void Move1space()
+    public void Move1spaceRight()
     {
         go.transform.position = go.transform.position + new Vector3(6.0f,0.0f,0.0f);
     }
 
-    public void MoveCameraForward()
-    {
-        go.transform.position = go.transform.position + new Vector3(0.0f, 0.0f, 6.0f);
-    }
-
-    public void MoveCameraBackwards()
-    {
-        go.transform.position = go.transform.position + new Vector3(0.0f, 0.0f, -6.0f);
-    }
-
-    public void MoveCameraLeft()
+    public void Move1spaceLeft()
     {
         go.transform.position = go.transform.position + new Vector3(-6.0f, 0.0f, 0.0f);
     }
 
-    public void MoveCameraRight()
+    public void Move1spaceForward()
     {
-        go.transform.position = go.transform.position + new Vector3(6.0f, 0.0f, 6.0f);
+        go.transform.position = go.transform.position + new Vector3(0.0f, 0.0f, 6.0f);
+    }
+
+    public void Move1spaceBackwards()
+    {
+        go.transform.position = go.transform.position + new Vector3(0.0f, 0.0f, -6.0f);
     }
 
     public void increaseCount()
