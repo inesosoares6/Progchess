@@ -64,10 +64,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\ChangeColor.cs" />
-    <Compile Include="Assets\ChessBoardScript.cs" />
-    <Compile Include="Assets\CubePosition.cs" />
-    <Compile Include="Assets\Functions.cs" />
     <Compile Include="Assets\GoogleVR\Beta\Demos\Scripts\DemoObjectController6DoF.cs" />
     <Compile Include="Assets\GoogleVR\Beta\Demos\Scripts\DemoSeeThroughController.cs" />
     <Compile Include="Assets\GoogleVR\Beta\Scripts\GvrBetaControllerInput.cs" />
@@ -192,9 +188,13 @@
     <Compile Include="Assets\GoogleVR\Scripts\Utilities\Internal\GvrCursorHelper.cs" />
     <Compile Include="Assets\GoogleVR\Scripts\Utilities\Internal\SuppressMemoryAllocationErrorAttribute.cs" />
     <Compile Include="Assets\GoogleVR\Scripts\Video\GvrVideoPlayerTexture.cs" />
-    <Compile Include="Assets\KnightScript.cs" />
-    <Compile Include="Assets\MoveCamera.cs" />
-    <Compile Include="Assets\Movements.cs" />
+    <Compile Include="Assets\Scripts\ChangeColor.cs" />
+    <Compile Include="Assets\Scripts\ChessBoardScript.cs" />
+    <Compile Include="Assets\Scripts\CubePosition.cs" />
+    <Compile Include="Assets\Scripts\Functions.cs" />
+    <Compile Include="Assets\Scripts\KnightScript.cs" />
+    <Compile Include="Assets\Scripts\MoveCamera.cs" />
+    <Compile Include="Assets\Scripts\Movements.cs" />
     <None Include="Assets\GoogleVR\Shaders\GvrUIOverlayFont.shader" />
     <None Include="Assets\GoogleVR\Shaders\GvrReticleShader.shader" />
     <None Include="Assets\GoogleVR\Beta\Shaders\GvrSeeThroughUI.shader" />
