@@ -2,14 +2,12 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - ChangeColor
-    - CubePosition
     - Functions
     - GvrEditorEmulator
     - GvrPointerInputModule
     - GvrPointerPhysicsRaycaster
     - GvrReticlePointer
-    - MoveCamera
-    - Movements
+    - KnightScript
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     UnityEditor.TestRunner.dll:
@@ -20,7 +18,7 @@ ScriptsOnlyBuild:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.EventTrigger
   sceneClasses:
-    Assets/Scenes/Chess.unity:
+    Assets/Scenes/Movements.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -39,11 +37,13 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
-    - Class: 54
-      Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
       Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
@@ -51,8 +51,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
-    - Class: 114
-      Script: {instanceID: 11442}
     - Class: 114
       Script: {instanceID: 11460}
     - Class: 114
@@ -62,22 +60,24 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12752}
     - Class: 114
-      Script: {instanceID: 12918}
+      Script: {instanceID: 12920}
     - Class: 114
-      Script: {instanceID: 13022}
+      Script: {instanceID: 13054}
     - Class: 114
-      Script: {instanceID: 13052}
+      Script: {instanceID: 13436}
     - Class: 114
-      Script: {instanceID: 13432}
+      Script: {instanceID: 13466}
     - Class: 114
-      Script: {instanceID: 13462}
-    - Class: 114
-      Script: {instanceID: 14214}
+      Script: {instanceID: 17006}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -526,6 +526,12 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
+      Hash: e55061dd3b4957a26362ea425ebed889
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MoveCamera
+  - hash:
+      serializedVersion: 2
       Hash: 1cbb684877139a8fcd5903f27462e898
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -682,6 +688,12 @@ ScriptsOnlyBuild:
     className: BaseInput
   - hash:
       serializedVersion: 2
+      Hash: 90fbbc0c21adf70e1d1b0e6ccc154ce0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ChessBoardScript
+  - hash:
+      serializedVersion: 2
       Hash: f0077b931a26a7eeaf5e245c7ef51ec4
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -802,11 +814,11 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: e55061dd3b4957a26362ea425ebed889
+      Hash: 0232cd20ee6099f56f84734891a3e29b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: MoveCamera
+    className: KnightScript
   platform: 13
   scenePathNames:
-  - Assets/Scenes/Chess.unity
-  playerPath: C:/Users/ineso/Unity Projects/Progchess/builds/chesstest.apk
+  - Assets/Scenes/Movements.unity
+  playerPath: C:/Users/ineso/Unity Projects/Progchess/builds/movements.apk

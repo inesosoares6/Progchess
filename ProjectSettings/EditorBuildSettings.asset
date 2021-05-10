@@ -11,7 +11,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Cubes.unity
     guid: fcbd70d4de5c86a408b70c3bca4a2304
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Chess.unity
     guid: 30a66cbd29241df4ea40e01ab37b31f8
+  - enabled: 1
+    path: Assets/Scenes/Movements.unity
+    guid: 750cd2038c175a34eabbbcaae70e5a7e
   m_configObjects: {}
