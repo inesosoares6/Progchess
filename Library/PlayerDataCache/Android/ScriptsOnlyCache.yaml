@@ -64,11 +64,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13054}
     - Class: 114
-      Script: {instanceID: 13436}
+      Script: {instanceID: 13360}
     - Class: 114
-      Script: {instanceID: 13466}
+      Script: {instanceID: 13438}
     - Class: 114
-      Script: {instanceID: 17006}
+      Script: {instanceID: 13468}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -658,6 +658,12 @@ ScriptsOnlyBuild:
     className: GvrTooltip
   - hash:
       serializedVersion: 2
+      Hash: 78023072dc25457ebf647d24c30ebd54
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: KnightScript
+  - hash:
+      serializedVersion: 2
       Hash: 12d597f55904a0e1480e1e25a07f583c
     assemblyName: Assembly-CSharp.dll
     namespaceName: GoogleVR.KeyboardDemo
@@ -812,12 +818,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 0232cd20ee6099f56f84734891a3e29b
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: KnightScript
   platform: 13
   scenePathNames:
   - Assets/Scenes/Movements.unity

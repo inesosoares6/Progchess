@@ -12,6 +12,13 @@ public class KnightScript : MonoBehaviour
     public GameObject arrow3;
     public GameObject knight;
     public GameObject cameraRig;
+    public GameObject chessBoard;
+    public GameObject buttonKnight;
+    public GameObject buttonPawn;
+    public GameObject buttonKing;
+    public GameObject buttonBishop;
+    public GameObject buttonQueen;
+    public GameObject buttonTower;
 
     // Start is called before the first frame update
     void Start()
@@ -79,6 +86,18 @@ public class KnightScript : MonoBehaviour
         arrow1.SetActive(false);
         arrow2.SetActive(false);
         arrow3.SetActive(false);
+    }
+
+    public void beginKnight()
+    {
+        chessBoard.SetActive(true);
+        knight.SetActive(true);
+        buttonKnight.SetActive(false);
+        buttonBishop.SetActive(false);
+        buttonKing.SetActive(false);
+        buttonQueen.SetActive(false);
+        buttonTower.SetActive(false);
+        buttonPawn.SetActive(false);
     }
 
 }
