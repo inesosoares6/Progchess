@@ -18,6 +18,8 @@ public class KnightScript : MonoBehaviour
     public GameObject buttonTower;
     public GameObject arrowL1;
     public GameObject arrowL2;
+    public GameObject arrowT1;
+    public GameObject arrowT2;
 
     // Start is called before the first frame update
     void Start()
@@ -59,6 +61,12 @@ public class KnightScript : MonoBehaviour
         arrowL2.SetActive(true);
         arrowL2.transform.position = knight.transform.position + new Vector3(-6.0f, 0.0f, 7.0f);
 
+        arrowT1.SetActive(true);
+        arrowT1.transform.position = knight.transform.position + new Vector3(-2.0f, 0.0f, 12.0f);
+
+        arrowT2.SetActive(true);
+        arrowT2.transform.position = knight.transform.position + new Vector3(2.0f, 0.0f, 12.0f);
+
         cameraRig.transform.position = knight.transform.position + new Vector3(0.0f, 20.0f, 0.0f);
         cameraRig.transform.rotation = new Quaternion(90.0f, 0.0f, 0.0f, 180.0f);
     }
@@ -79,15 +87,28 @@ public class KnightScript : MonoBehaviour
         DeleteArrows();
     }
 
-    public void MoveFrontSide()
+    public void MoveFrontRight()
     {
+        knight.transform.position = knight.transform.position + new Vector3(0.0f, 0.0f, 6.0f);
+        knight.transform.position = knight.transform.position + new Vector3(0.0f, 0.0f, 6.0f);
+        knight.transform.position = knight.transform.position + new Vector3(6.0f, 0.0f, 0.0f);
+        DeleteArrows();
+    }
 
+    public void MoveFrontLeft()
+    {
+        knight.transform.position = knight.transform.position + new Vector3(0.0f, 0.0f, 6.0f);
+        knight.transform.position = knight.transform.position + new Vector3(0.0f, 0.0f, 6.0f);
+        knight.transform.position = knight.transform.position + new Vector3(-6.0f, 0.0f, 0.0f);
+        DeleteArrows();
     }
 
     private void DeleteArrows()
     {
         arrowL1.SetActive(false);
         arrowL2.SetActive(false);
+        arrowT1.SetActive(false);
+        arrowT2.SetActive(false);
     }
 
     public void beginKnight()
