@@ -679,7 +679,7 @@ ScriptsOnlyBuild:
     className: GvrTooltip
   - hash:
       serializedVersion: 2
-      Hash: 460bc31083b27431a55b99e23377dddd
+      Hash: 145ec84d06fb0538f1b24640a77ea17e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: KnightScript
