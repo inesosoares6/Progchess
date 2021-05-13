@@ -46,4 +46,4 @@
 #Folders
 **/[Bb]uild/
 **/[Bb]uilds/
-**/Library/
+/Library/
