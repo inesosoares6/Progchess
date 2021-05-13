@@ -21,28 +21,23 @@ public class KnightScript : MonoBehaviour
     public GameObject arrowT1;
     public GameObject arrowT2;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void chooseAction()
     {
         switch (count)
         {
             case 1:
                 audioData.Play(0);
+                if(knight.transform.position.z >= 12)
+                {
+                    count = 2;
+                }
                 break;
             case 2:
                 showDirections();
                 count = 0;
+                break;
+            case 3:
+                endGame();
                 break;
         }
     }
@@ -121,6 +116,11 @@ public class KnightScript : MonoBehaviour
         buttonQueen.SetActive(false);
         buttonTower.SetActive(false);
         buttonPawn.SetActive(false);
+    }
+
+    private void endGame()
+    {
+
     }
 
 }
