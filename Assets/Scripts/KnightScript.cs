@@ -7,9 +7,6 @@ public class KnightScript : MonoBehaviour
 {
     private int count;
     public AudioSource audioData;
-    public GameObject arrow1;
-    public GameObject arrow2;
-    public GameObject arrow3;
     public GameObject knight;
     public GameObject cameraRig;
     public GameObject chessBoard;
@@ -19,6 +16,8 @@ public class KnightScript : MonoBehaviour
     public GameObject buttonBishop;
     public GameObject buttonQueen;
     public GameObject buttonTower;
+    public GameObject arrowL1;
+    public GameObject arrowL2;
 
     // Start is called before the first frame update
     void Start()
@@ -54,23 +53,27 @@ public class KnightScript : MonoBehaviour
 
     private void showDirections()
     {
-        arrow1.SetActive(true);
-        arrow1.transform.position = knight.transform.position + new Vector3(3.0f,0.0f,0.0f);
-        //arrow1.transform.rotation = new Quaternion(45.0f, 0.0f, 0.0f, 0.0f);
-        arrow2.SetActive(true);
-        arrow2.transform.position = knight.transform.position + new Vector3(6.0f, 0.0f, 3.0f);
-        //arrow2.transform.rotation = new Quaternion(1.0f, 0.0f, 0.0f, 0.0f);
-        arrow3.SetActive(true);
-        arrow3.transform.position = knight.transform.position + new Vector3(6.0f, 0.0f, 9.0f);
-        //arrow3.transform.rotation = new Quaternion(1.0f, 0.0f, 0.0f, 0.0f);
+        arrowL1.SetActive(true);
+        arrowL1.transform.position = knight.transform.position + new Vector3(6.0f,0.0f,7.0f);
+
+        arrowL2.SetActive(true);
+        arrowL2.transform.position = knight.transform.position + new Vector3(-6.0f, 0.0f, 7.0f);
 
         cameraRig.transform.position = knight.transform.position + new Vector3(0.0f, 20.0f, 0.0f);
         cameraRig.transform.rotation = new Quaternion(90.0f, 0.0f, 0.0f, 180.0f);
     }
 
-    public void MoveSideFront()
+    public void MoveRightFront()
     {
         knight.transform.position = knight.transform.position + new Vector3(6.0f, 0.0f, 0.0f);
+        knight.transform.position = knight.transform.position + new Vector3(0.0f, 0.0f, 6.0f);
+        knight.transform.position = knight.transform.position + new Vector3(0.0f, 0.0f, 6.0f);
+        DeleteArrows();
+    }
+
+    public void MoveLeftFront()
+    {
+        knight.transform.position = knight.transform.position + new Vector3(-6.0f, 0.0f, 0.0f);
         knight.transform.position = knight.transform.position + new Vector3(0.0f, 0.0f, 6.0f);
         knight.transform.position = knight.transform.position + new Vector3(0.0f, 0.0f, 6.0f);
         DeleteArrows();
@@ -83,9 +86,8 @@ public class KnightScript : MonoBehaviour
 
     private void DeleteArrows()
     {
-        arrow1.SetActive(false);
-        arrow2.SetActive(false);
-        arrow3.SetActive(false);
+        arrowL1.SetActive(false);
+        arrowL2.SetActive(false);
     }
 
     public void beginKnight()

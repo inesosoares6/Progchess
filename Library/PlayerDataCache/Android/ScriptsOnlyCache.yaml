@@ -63,27 +63,27 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11374}
     - Class: 114
-      Script: {instanceID: 11396}
+      Script: {instanceID: 11394}
     - Class: 114
-      Script: {instanceID: 11462}
+      Script: {instanceID: 11460}
     - Class: 114
-      Script: {instanceID: 11826}
+      Script: {instanceID: 11824}
     - Class: 114
-      Script: {instanceID: 12080}
+      Script: {instanceID: 12078}
     - Class: 114
-      Script: {instanceID: 12754}
+      Script: {instanceID: 12752}
     - Class: 114
-      Script: {instanceID: 12922}
+      Script: {instanceID: 12920}
     - Class: 114
-      Script: {instanceID: 13056}
+      Script: {instanceID: 13054}
     - Class: 114
-      Script: {instanceID: 13100}
+      Script: {instanceID: 13098}
     - Class: 114
-      Script: {instanceID: 13362}
+      Script: {instanceID: 13360}
     - Class: 114
-      Script: {instanceID: 13440}
+      Script: {instanceID: 13438}
     - Class: 114
-      Script: {instanceID: 13470}
+      Script: {instanceID: 13468}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -91,8 +91,6 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
-      Script: {instanceID: 0}
-    - Class: 212
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -681,7 +679,7 @@ ScriptsOnlyBuild:
     className: GvrTooltip
   - hash:
       serializedVersion: 2
-      Hash: ab0339631993c9f11d9fa5d942bd67b2
+      Hash: 460bc31083b27431a55b99e23377dddd
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: KnightScript
