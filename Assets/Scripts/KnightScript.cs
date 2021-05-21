@@ -21,6 +21,11 @@ public class KnightScript : MonoBehaviour
     public GameObject arrowT1;
     public GameObject arrowT2;
 
+    private void Start()
+    {
+        knight.transform.position = new Vector3(15.0f, 0.0f, -21.0f);
+    }
+
     private void chooseAction()
     {
         switch (count)
