@@ -1,30 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class IdentificationManager : MonoBehaviour
 {
     public GameObject buttonsLevels;
-    public GameObject buttonsPieces;
-    public GameObject Pawn;
-    public GameObject Tower;
-    public GameObject Knight;
-    public GameObject King;
-    public GameObject Queen;
-    public GameObject Bishop;
-    public GameObject Board;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public GameObject manager;
+    public Level1Script level1;
+    public GameObject backButtonScene;
 
     public void Level(int gameLevel)
     {
@@ -33,64 +17,44 @@ public class IdentificationManager : MonoBehaviour
         switch (gameLevel)
         {
             case 1:
-                activatePiecesButtons();
+                manager.GetComponent<Level1Script>().enabled = true;
+                level1.activatePiecesButtons();
+                backButtonScene.SetActive(false);
                 break;
             case 2:
-
+                manager.GetComponent<Level2Script>().enabled = true;
+                backButtonScene.SetActive(false);
                 break;
             case 3:
-
+                manager.GetComponent<Level3Script>().enabled = true;
+                backButtonScene.SetActive(false);
                 break;
             case 4:
-
+                manager.GetComponent<Level4Script>().enabled = true;
+                backButtonScene.SetActive(false);
                 break;
         }
     }
 
-    public void Piece(string piece)
-    {
-        switch (piece)
-        {
-            case "Pawn":
-                initiateGame(Pawn);
-                break;
-            case "Tower":
-                initiateGame(Tower);
-                break;
-            case "Knight":
-                initiateGame(Knight);
-                break;
-            case "King":
-                initiateGame(King);
-                break;
-            case "Queen":
-                initiateGame(Queen);
-                break;
-            case "Bishop":
-                initiateGame(Bishop);
-                break;
-        }
-    }
-
-    private void initiateGame(GameObject piece)
-    {
-        deactivatePiecesButtons();
-        piece.SetActive(true);
-    }
 
     private void deactivateLevelButtons()
     {
         buttonsLevels.SetActive(false);
     }
 
-    private void activatePiecesButtons()
+    public void activateLevelButtons()
     {
-        buttonsPieces.SetActive(true);
+        buttonsLevels.SetActive(true);
+        backButtonScene.SetActive(false);
+        manager.GetComponent<Level1Script>().enabled = false;
+        manager.GetComponent<Level2Script>().enabled = false;
+        manager.GetComponent<Level3Script>().enabled = false;
+        manager.GetComponent<Level4Script>().enabled = false;
     }
 
-    private void deactivatePiecesButtons()
+    public void back2scene()
     {
-        buttonsPieces.SetActive(false);
+        SceneManager.LoadScene("Manager");
     }
 
 }

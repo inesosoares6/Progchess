@@ -20,7 +20,7 @@ public class ManagerScript : MonoBehaviour
     public void sceneIdentifyPieces()
     {
         Debug.Log("Scene -> Identificar Peças");
-        SceneManager.LoadScene("Cubes");
+        SceneManager.LoadScene("Identification");
     }
 
     public void sceneBatalhaNaval()
