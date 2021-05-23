@@ -8,6 +8,7 @@ public class IdentificationManager : MonoBehaviour
     public GameObject buttonsLevels;
     public GameObject manager;
     public Level1Script level1;
+    public Level2Script level2;
     public GameObject backButtonScene;
 
     public void Level(int gameLevel)
@@ -23,6 +24,7 @@ public class IdentificationManager : MonoBehaviour
                 break;
             case 2:
                 manager.GetComponent<Level2Script>().enabled = true;
+                level2.initiateLevel();
                 backButtonScene.SetActive(false);
                 break;
             case 3:
