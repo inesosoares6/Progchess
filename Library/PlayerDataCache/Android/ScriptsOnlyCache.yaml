@@ -261,6 +261,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 13578}
     - Class: 115
       Script: {instanceID: 0}
+    - Class: 120
+      Script: {instanceID: 0}
     - Class: 128
       Script: {instanceID: 0}
     - Class: 136
@@ -590,7 +592,7 @@ ScriptsOnlyBuild:
     className: GridLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 142ac0719a16b6083611ece156bca8cd
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Level4Script
@@ -1166,7 +1168,7 @@ ScriptsOnlyBuild:
     className: ScrubberEvents
   - hash:
       serializedVersion: 2
-      Hash: ee810693fcdfc7c247861e1da84d1fcc
+      Hash: ea9fe4fb960e8d040ee9dca260cfa0cb
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: IdentificationManager
