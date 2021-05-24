@@ -16,11 +16,18 @@ public class Level2Script : MonoBehaviour
     public GameObject backButtonLevels;
     public GameObject backButtonScene;
     public IdentificationManager manager;
+    public AudioSource rightAnswer;
+    public AudioSource wrongAnswer;
+    private int aux;
 
     public void initiateLevel()
     {
         erasePieces();
         pieceNum = randomNumber();
+        while(pieceNum == aux)
+        {
+            pieceNum = randomNumber();
+        }
         switch (pieceNum)
         {
             case 1:
@@ -42,6 +49,7 @@ public class Level2Script : MonoBehaviour
                 Bishop.SetActive(true);
                 break;
         }
+        aux = pieceNum;
         activateNamesButtons();
     }
 
@@ -49,11 +57,12 @@ public class Level2Script : MonoBehaviour
     {
         if(pieceNumber == pieceNum) // CORRECT
         {
+            rightAnswer.Play(0);
             initiateLevel();
         }
         else // INCORRECT
         {
-
+            wrongAnswer.Play(0);
         }
     }
 
