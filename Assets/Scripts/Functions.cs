@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Functions : MonoBehaviour
 {
@@ -18,5 +19,10 @@ public class Functions : MonoBehaviour
             // close icon pressed, place appropriate code here
             Application.Quit();
         }
+    }
+
+    public void back2scene()
+    {
+        SceneManager.LoadScene("Manager");
     }
 }

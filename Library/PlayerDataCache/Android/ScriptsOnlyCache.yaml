@@ -421,6 +421,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 128
       Script: {instanceID: 0}
+    - Class: 135
+      Script: {instanceID: 0}
+    - Class: 136
+      Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
@@ -1234,7 +1238,7 @@ ScriptsOnlyBuild:
     className: GvrTooltip
   - hash:
       serializedVersion: 2
-      Hash: 145ec84d06fb0538f1b24640a77ea17e
+      Hash: ca8a792df25cf9fde7ce1cd4ef3592ac
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: KnightScript

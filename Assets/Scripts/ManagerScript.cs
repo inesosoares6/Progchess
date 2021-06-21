@@ -34,4 +34,10 @@ public class ManagerScript : MonoBehaviour
         Debug.Log("Scene -> Movimentos das Peças");
         SceneManager.LoadScene("Movements");
     }
+
+    public void sceneBoardSetup()
+    {
+        Debug.Log("Scene -> Board Setup");
+        SceneManager.LoadScene("BoardSetup");
+    }
 }
