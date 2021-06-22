@@ -8,12 +8,8 @@ public class KnightScript : MonoBehaviour
     public GameObject knight;
     public GameObject cameraRig;
     public GameObject chessBoard;
-    public GameObject buttonKnight;
-    public GameObject buttonPawn;
-    public GameObject buttonKing;
-    public GameObject buttonBishop;
-    public GameObject buttonQueen;
-    public GameObject buttonTower;
+    public GameObject buttonPieces;
+    public GameObject buttonLevels;
     public GameObject sphere1;
     public GameObject sphere2;
     public GameObject sphere3;
@@ -22,18 +18,187 @@ public class KnightScript : MonoBehaviour
     public GameObject sphere6;
     public GameObject sphere7;
     public GameObject sphere8;
+    public GameObject target;
     public GameObject back2scenes;
     public GameObject back2pieces;
+    private int level;
+    public AudioSource rightAnswer;
+    public AudioSource levelUp;
 
-    private void Start()
+    public void defineLevel(int num)
     {
-        knight.transform.position = new Vector3(15.0f, 0.0f, -21.0f);
+        level = num;
+        beginKnight();
+        moveTarget(level);
+    }
+
+    private void checkTarget()
+    {
+        if(knight.transform.position.x == target.transform.position.x && knight.transform.position.z == target.transform.position.z)
+        {
+            if(level == 7)
+            {
+                showLevels();
+                levelUp.Play(0);
+            }
+            else if(level == 12)
+            {
+                levelUp.Play(0);
+                showLevels();
+            }
+            else if (level == 20)
+            {
+                levelUp.Play(0);
+                showLevels();
+            }
+            else if (level == 26)
+            {
+                levelUp.Play(0);
+                showLevels();
+            }
+            else if (level == 35)
+            {
+                levelUp.Play(0);
+                showLevels();
+            }
+            else
+            {
+                rightAnswer.Play(0);
+                level++;
+                moveTarget(level);
+            }
+        }
+    }
+
+    private void moveTarget(int levelNum)
+    {
+        switch (levelNum)
+        {
+            case 1: // LEVEL I - x1
+                knight.transform.position = new Vector3(-15.0f, 0.0f, -21.0f);
+                target.SetActive(true);
+                target.transform.position = new Vector3(-9.0f, 0.2f, -9.0f);
+                break;
+            case 2: // LEVEL I - x2
+                target.transform.position = new Vector3(3.0f, 0.2f, -15.0f);
+                break;
+            case 3: // LEVEL I - x3
+                target.transform.position = new Vector3(-3.0f, 0.2f, -3.0f);
+                break;
+            case 4: // LEVEL I - x4
+                target.transform.position = new Vector3(9.0f, 0.2f, -9.0f);
+                break;
+            case 5: // LEVEL I - x5
+                target.transform.position = new Vector3(15.0f, 0.2f, 3.0f);
+                break;
+            case 6: // LEVEL I - x6
+                target.transform.position = new Vector3(9.0f, 0.2f, 15.0f);
+                break;
+            case 7: // LEVEL I - x7
+                target.transform.position = new Vector3(21.0f, 0.2f, 21.0f);
+                break;
+            case 8: // LEVEL II - x1
+                knight.transform.position = new Vector3(-9.0f, 0.0f, 15.0f);
+                target.SetActive(true);
+                target.transform.position = new Vector3(3.0f, 0.2f, 9.0f);
+                cameraRig.transform.position = knight.transform.position + new Vector3(0.0f, 10.0f, -20.0f);
+                break;
+            case 9: // LEVEL II - x2
+                target.transform.position = new Vector3(9.0f, 0.2f, -3.0f);
+                break;
+            case 10: // LEVEL II - x3
+                target.transform.position = new Vector3(-3.0f, 0.2f, 3.0f);
+                break;
+            case 11: // LEVEL II - x4
+                target.transform.position = new Vector3(-15.0f, 0.2f, 9.0f);
+                break;
+            case 12: // LEVEL II - x5
+                target.transform.position = new Vector3(-3.0f, 0.2f, 15.0f);
+                break;
+            case 13: // LEVEL III - x1
+                knight.transform.position = new Vector3(9.0f, 0.0f, -3.0f);
+                target.SetActive(true);
+                target.transform.position = new Vector3(15.0f, 0.2f, -9.0f);
+                cameraRig.transform.position = knight.transform.position + new Vector3(0.0f, 10.0f, -20.0f);
+                break;
+            case 14: // LEVEL III - x2
+                target.transform.position = new Vector3(9.0f, 0.2f, 3.0f);
+                break;
+            case 15: // LEVEL III - x3
+                target.transform.position = new Vector3(3.0f, 0.2f, -9.0f);
+                break;
+            case 16: // LEVEL III - x4
+                target.transform.position = new Vector3(15.0f, 0.2f, -3.0f);
+                break;
+            case 17: // LEVEL III - x5
+                target.transform.position = new Vector3(3.0f, 0.2f, 3.0f);
+                break;
+            case 18: // LEVEL III - x6
+                target.transform.position = new Vector3(9.0f, 0.2f, -9.0f);
+                break;
+            case 19: // LEVEL III - x7
+                target.transform.position = new Vector3(15.0f, 0.2f, 3.0f);
+                break;
+            case 20: // LEVEL III - x8
+                target.transform.position = new Vector3(3.0f, 0.2f, -3.0f);
+                break;
+            case 21: // LEVEL IV - x1
+                knight.transform.position = new Vector3(-3.0f, 0.0f, -9.0f);
+                target.SetActive(true);
+                target.transform.position = new Vector3(9.0f, 0.2f, -15.0f);
+                cameraRig.transform.position = knight.transform.position + new Vector3(0.0f, 10.0f, -20.0f);
+                break;
+            case 22: // LEVEL IV - x2
+                target.transform.position = new Vector3(3.0f, 0.2f, -3.0f);
+                break;
+            case 23: // LEVEL IV - x3
+                target.transform.position = new Vector3(-9.0f, 0.2f, -9.0f);
+                break;
+            case 24: // LEVEL IV - x4
+                target.transform.position = new Vector3(3.0f, 0.2f, -15.0f);
+                break;
+            case 25: // LEVEL IV - x5
+                target.transform.position = new Vector3(9.0f, 0.2f, -3.0f);
+                break;
+            case 26: // LEVEL IV - x6
+                target.transform.position = new Vector3(15.0f, 0.2f, 9.0f);
+                break;
+            case 27: // LEVEL V - x1
+                knight.transform.position = new Vector3(-9.0f, 0.0f, 15.0f);
+                target.SetActive(true);
+                target.transform.position = new Vector3(-15.0f, 0.2f, 3.0f);
+                cameraRig.transform.position = knight.transform.position + new Vector3(0.0f, 10.0f, -20.0f);
+                break;
+            case 28: // LEVEL V - x2
+                target.transform.position = new Vector3(-3.0f, 0.2f, -3.0f);
+                break;
+            case 29: // LEVEL V - x3
+                target.transform.position = new Vector3(9.0f, 0.2f, 3.0f);
+                break;
+            case 30: // LEVEL V - x4
+                target.transform.position = new Vector3(3.0f, 0.2f, -9.0f);
+                break;
+            case 31: // LEVEL V - x5
+                target.transform.position = new Vector3(-3.0f, 0.2f, 3.0f);
+                break;
+            case 32: // LEVEL V - x6
+                target.transform.position = new Vector3(-15.0f, 0.2f, -3.0f);
+                break;
+            case 33: // LEVEL V - x7
+                target.transform.position = new Vector3(-9.0f, 0.2f, 9.0f);
+                break;
+            case 34: // LEVEL V - x8
+                target.transform.position = new Vector3(3.0f, 0.2f, 15.0f);
+                break;
+            case 35: // LEVEL V - x9
+                target.transform.position = new Vector3(-9.0f, 0.2f, 21.0f);
+                break;
+        }
     }
 
     public void clicked()
     {
         verifyPossibilities();
-        Debug.Log(knight.transform.position);
     }
 
     private void verifyPossibilities()
@@ -243,7 +408,6 @@ public class KnightScript : MonoBehaviour
 
         cameraRig.transform.position = knight.transform.position + new Vector3(0.0f, 20.0f, 0.0f);
         cameraRig.transform.rotation = new Quaternion(90.0f, 0.0f, 0.0f, 180.0f);
-        back2pieces.transform.position = cameraRig.transform.position + new Vector3(10.0f, 10.0f, 10.0f);
     }
 
     public void Move_Right_Front_Front() // #1
@@ -252,6 +416,7 @@ public class KnightScript : MonoBehaviour
         knight.transform.position = knight.transform.position + new Vector3(0.0f, 0.0f, 6.0f);
         knight.transform.position = knight.transform.position + new Vector3(0.0f, 0.0f, 6.0f);
         DeleteArrows();
+        checkTarget();
     }
 
     public void Move_Left_Front_Front() // #8
@@ -260,6 +425,7 @@ public class KnightScript : MonoBehaviour
         knight.transform.position = knight.transform.position + new Vector3(0.0f, 0.0f, 6.0f);
         knight.transform.position = knight.transform.position + new Vector3(0.0f, 0.0f, 6.0f);
         DeleteArrows();
+        checkTarget();
     }
 
     public void Move_Right_Right_Front() // #2
@@ -268,6 +434,7 @@ public class KnightScript : MonoBehaviour
         knight.transform.position = knight.transform.position + new Vector3(6.0f, 0.0f, 0.0f);
         knight.transform.position = knight.transform.position + new Vector3(0.0f, 0.0f, 6.0f);
         DeleteArrows();
+        checkTarget();
     }
 
     public void Move_Right_Right_Back() // #3
@@ -276,6 +443,7 @@ public class KnightScript : MonoBehaviour
         knight.transform.position = knight.transform.position + new Vector3(6.0f, 0.0f, 0.0f);
         knight.transform.position = knight.transform.position + new Vector3(0.0f, 0.0f, -6.0f);
         DeleteArrows();
+        checkTarget();
     }
     public void Move_Right_Back_Back() // #4
     {
@@ -283,6 +451,7 @@ public class KnightScript : MonoBehaviour
         knight.transform.position = knight.transform.position + new Vector3(0.0f, 0.0f, -6.0f);
         knight.transform.position = knight.transform.position + new Vector3(0.0f, 0.0f, -6.0f);
         DeleteArrows();
+        checkTarget();
     }
     public void Move_Left_Back_Back() // #5
     {
@@ -290,6 +459,7 @@ public class KnightScript : MonoBehaviour
         knight.transform.position = knight.transform.position + new Vector3(0.0f, 0.0f, -6.0f);
         knight.transform.position = knight.transform.position + new Vector3(0.0f, 0.0f, -6.0f);
         DeleteArrows();
+        checkTarget();
     }
     public void Move_Left_Left_Back() // #6
     {
@@ -297,6 +467,7 @@ public class KnightScript : MonoBehaviour
         knight.transform.position = knight.transform.position + new Vector3(-6.0f, 0.0f, 0.0f);
         knight.transform.position = knight.transform.position + new Vector3(0.0f, 0.0f, -6.0f);
         DeleteArrows();
+        checkTarget();
     }
     public void Move_Left_Left_Front() // #7
     {
@@ -304,6 +475,7 @@ public class KnightScript : MonoBehaviour
         knight.transform.position = knight.transform.position + new Vector3(-6.0f, 0.0f, 0.0f);
         knight.transform.position = knight.transform.position + new Vector3(0.0f, 0.0f, 6.0f);
         DeleteArrows();
+        checkTarget();
     }
 
     private void DeleteArrows()
@@ -321,27 +493,31 @@ public class KnightScript : MonoBehaviour
     public void beginKnight()
     {
         knight.SetActive(true);
-        buttonKnight.SetActive(false);
-        buttonBishop.SetActive(false);
-        buttonKing.SetActive(false);
-        buttonQueen.SetActive(false);
-        buttonTower.SetActive(false);
-        buttonPawn.SetActive(false);
+        buttonLevels.SetActive(false);
+        back2pieces.SetActive(false);
+    }
+
+    public void showLevels()
+    {
+        buttonLevels.SetActive(true);
+        buttonPieces.SetActive(false);
         back2scenes.SetActive(false);
         back2pieces.SetActive(true);
+        DeleteArrows();
+        target.SetActive(false);
+        cameraRig.transform.position = new Vector3(2.03f, 9.11f, -32.28f);
+        cameraRig.transform.rotation = new Quaternion(0.0f, 0.0f, 0.0f, 0.0f);
     }
 
     public void endGame()
     {
         DeleteArrows();
+        buttonLevels.SetActive(false);
         knight.SetActive(false);
-        buttonKnight.SetActive(true);
-        buttonBishop.SetActive(true);
-        buttonKing.SetActive(true);
-        buttonQueen.SetActive(true);
-        buttonTower.SetActive(true);
-        buttonPawn.SetActive(true);
+        buttonPieces.SetActive(true);
         back2scenes.SetActive(true);
         back2pieces.SetActive(false);
+        target.SetActive(false);
+        cameraRig.transform.position = new Vector3(2.03f, 9.11f, -32.28f);
     }
 }

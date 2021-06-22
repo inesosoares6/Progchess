@@ -32,18 +32,6 @@ public class Level4Script : MonoBehaviour
     public GameObject backButtonLevels;
     public GameObject backButtonScene;
     public IdentificationManager manager;
-    private Vector3 positionBtn1 = new Vector3(14.81f, 3.0f, 27.84f);
-    private Vector3 positionBtn2 = new Vector3(2.64f, 3.0f, 27.84f);
-    private Vector3 positionBtn3 = new Vector3(-3.78f, 3.0f, 27.84f);
-    private Vector3 positionBtn4 = new Vector3(8.67f, 3.0f, 27.84f);
-    private Vector3 positionBtn5 = new Vector3(-10.13f, 3.0f, 27.84f);
-    private Vector3 positionBtn6 = new Vector3(-16.4f, 3.0f, 27.84f);
-    //private Vector3 positionPiece1 = new Vector3(0.04f, -9.48f, 10.0f);
-    //private Vector3 positionPiece2 = new Vector3(-9.82f, -9.48f, 20.0f);
-    //private Vector3 positionPiece3 = new Vector3(5.01f, -9.48f, 20.0f);
-    //private Vector3 positionPiece4 = new Vector3(-14.6f, -9.48f, 20.0f);
-    //private Vector3 positionPiece5 = new Vector3(-4.89f, -9.48f, 20.0f);
-    //private Vector3 positionPiece6 = new Vector3(9.74f, -9.48f, 20.0f);
     private Vector3 positionPiece1;
     private Vector3 positionPiece2;
     private Vector3 positionPiece3;
@@ -70,7 +58,6 @@ public class Level4Script : MonoBehaviour
         pieces.SetActive(true);
         names.SetActive(true);
         backButtonLevels.SetActive(true);
-        //reorderPieces();
     }
 
     private void reorderPieces()
