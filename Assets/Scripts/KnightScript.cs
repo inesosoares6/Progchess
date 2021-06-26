@@ -25,52 +25,52 @@ public class KnightScript : MonoBehaviour
     public AudioSource rightAnswer;
     public AudioSource levelUp;
 
-    public void defineLevel(int num)
+    public void defineLevel_knight(int num)
     {
         level = num;
         beginKnight();
-        moveTarget(level);
+        moveTarget_knight(level);
     }
 
-    private void checkTarget()
+    private void checkTarget_knight()
     {
         if(knight.transform.position.x == target.transform.position.x && knight.transform.position.z == target.transform.position.z)
         {
             if(level == 7)
             {
-                showLevels();
+                showLevels_knight();
                 levelUp.Play(0);
             }
             else if(level == 12)
             {
                 levelUp.Play(0);
-                showLevels();
+                showLevels_knight();
             }
             else if (level == 20)
             {
                 levelUp.Play(0);
-                showLevels();
+                showLevels_knight();
             }
             else if (level == 26)
             {
                 levelUp.Play(0);
-                showLevels();
+                showLevels_knight();
             }
             else if (level == 35)
             {
                 levelUp.Play(0);
-                showLevels();
+                showLevels_knight();
             }
             else
             {
                 rightAnswer.Play(0);
                 level++;
-                moveTarget(level);
+                moveTarget_knight(level);
             }
         }
     }
 
-    private void moveTarget(int levelNum)
+    private void moveTarget_knight(int levelNum)
     {
         switch (levelNum)
         {
@@ -78,6 +78,7 @@ public class KnightScript : MonoBehaviour
                 knight.transform.position = new Vector3(-15.0f, 0.0f, -21.0f);
                 target.SetActive(true);
                 target.transform.position = new Vector3(-9.0f, 0.2f, -9.0f);
+                cameraRig.transform.position = new Vector3(2.03f, 9.11f, -32.28f);
                 break;
             case 2: // LEVEL I - x2
                 target.transform.position = new Vector3(3.0f, 0.2f, -15.0f);
@@ -196,17 +197,17 @@ public class KnightScript : MonoBehaviour
         }
     }
 
-    public void clicked()
+    public void clicked_knight()
     {
-        verifyPossibilities();
+        verifyPossibilities_knight();
     }
 
-    private void verifyPossibilities()
+    private void verifyPossibilities_knight()
     {
         if (knight.transform.position.z >= -9 && knight.transform.position.z <= 9 && knight.transform.position.x <= 9 && knight.transform.position.x >= -9)
         {
             // every directions possible
-            showDirections(true, true, true, true, true, true, true, true);
+            showDirections_knight(true, true, true, true, true, true, true, true);
         }
         else if (knight.transform.position.z >= 21)
         {
@@ -214,26 +215,26 @@ public class KnightScript : MonoBehaviour
             if (knight.transform.position.x <= -21)
             {
                 // 6 and 5 not possible
-                showDirections(false, false, true, true, false, false, false, false);
+                showDirections_knight(false, false, true, true, false, false, false, false);
             }
             else if (knight.transform.position.x <= -15)
             {
                 // 6 not possible
-                showDirections(false, false, true, true, true, false, false, false);
+                showDirections_knight(false, false, true, true, true, false, false, false);
             }
             else if (knight.transform.position.x >= 21)
             {
                 // 3 and 4 not possible
-                showDirections(false, false, false, false, true, true, false, false);
+                showDirections_knight(false, false, false, false, true, true, false, false);
             }
             else if (knight.transform.position.x >= 15)
             {
                 // 3 not possible
-                showDirections(false, false, false, true, true, true, false, false);
+                showDirections_knight(false, false, false, true, true, true, false, false);
             }
             else
             {
-                showDirections(false, false, true, true, true, true, false, false);
+                showDirections_knight(false, false, true, true, true, true, false, false);
             }
         }
         else if (knight.transform.position.z >= 15)
@@ -242,25 +243,25 @@ public class KnightScript : MonoBehaviour
             if(knight.transform.position.x <= -21)
             {
                 // 7, 6, and 5 not possible
-                showDirections(false, true, true, true, false, false, false, false);
+                showDirections_knight(false, true, true, true, false, false, false, false);
             } 
             else if (knight.transform.position.x <= -15)
             {
                 // 3 and 2 not possible
-                showDirections(false, false, false, true, true, true, true, false);
+                showDirections_knight(false, false, false, true, true, true, true, false);
             } else if (knight.transform.position.x >= 21)
             {
                 // 2, 3, and 4 not possible
-                showDirections(false, false, false, false, true, true, true, false);
+                showDirections_knight(false, false, false, false, true, true, true, false);
             }
             else if (knight.transform.position.x >= 15)
             {
                 // 2 and 3 not possible
-                showDirections(false, false, false, true, true, true, true, false);
+                showDirections_knight(false, false, false, true, true, true, true, false);
             }
             else
             {
-                showDirections(false, true, true, true, true, true, true, false);
+                showDirections_knight(false, true, true, true, true, true, true, false);
             }
         }
         else if (knight.transform.position.z <= -21)
@@ -269,26 +270,26 @@ public class KnightScript : MonoBehaviour
             if (knight.transform.position.x <= -21)
             {
                 // 7 and 8 not possible
-                showDirections(true, true, false, false, false, false, false, false);
+                showDirections_knight(true, true, false, false, false, false, false, false);
             }
             else if (knight.transform.position.x <= -15)
             {
                 // 7 not possible
-                showDirections(true, true, false, false, false, false, false, true);
+                showDirections_knight(true, true, false, false, false, false, false, true);
             }
             else if (knight.transform.position.x >= 21)
             {
                 // 1 and 2 not possible
-                showDirections(false, false, false, false, false, false, true, true);
+                showDirections_knight(false, false, false, false, false, false, true, true);
             }
             else if (knight.transform.position.x >= 15)
             {
                 // 2 not possible
-                showDirections(true, false, false, false, false, false, true, true);
+                showDirections_knight(true, false, false, false, false, false, true, true);
             }
             else
             {
-                showDirections(true, true, false, false, false, false, true, true);
+                showDirections_knight(true, true, false, false, false, false, true, true);
             }
         }
         else if (knight.transform.position.z <= -15)
@@ -297,26 +298,26 @@ public class KnightScript : MonoBehaviour
             if (knight.transform.position.x <= -21)
             {
                 // 6, 7 and 8 not possible
-                showDirections(true, true, true, false, false, false, false, false);
+                showDirections_knight(true, true, true, false, false, false, false, false);
             }
             else if (knight.transform.position.x <= -15)
             {
                 // 6 and 7 not possible
-                showDirections(true, true, true, false, false, false, false, true);
+                showDirections_knight(true, true, true, false, false, false, false, true);
             }
             else if (knight.transform.position.x >= 21)
             {
                 // 1, 2 and 3 not possible
-                showDirections(false, false, false, false, false, true, true, true);
+                showDirections_knight(false, false, false, false, false, true, true, true);
             }
             else if (knight.transform.position.x >= 15)
             {
                 // 2 and 3 not possible
-                showDirections(true, false, false, false, false, true, true, true);
+                showDirections_knight(true, false, false, false, false, true, true, true);
             }
             else
             {
-                showDirections(true, true, true, false, false, true, true, true);
+                showDirections_knight(true, true, true, false, false, true, true, true);
             }
         }
         else
@@ -324,31 +325,31 @@ public class KnightScript : MonoBehaviour
             if (knight.transform.position.x <= -21)
             {
                 // 5, 6, 7 and 8 not possible
-                showDirections(true, true, true, true, false, false, false, false);
+                showDirections_knight(true, true, true, true, false, false, false, false);
             }
             else if (knight.transform.position.x <= -15)
             {
                 // 6 and 7 not possible
-                showDirections(true, true, true, true, true, false, false, true);
+                showDirections_knight(true, true, true, true, true, false, false, true);
             }
             else if (knight.transform.position.x >= 21)
             {
                 // 1, 2, 3 and 4 not possible
-                showDirections(false, false, false, false, true, true, true, true);
+                showDirections_knight(false, false, false, false, true, true, true, true);
             }
             else if (knight.transform.position.x >= 15)
             {
                 // 2 and 3 not possible
-                showDirections(true, false, false, true, true, true, true, true);
+                showDirections_knight(true, false, false, true, true, true, true, true);
             }
             else
             {
-                showDirections(true, true, true, true, false, false, false, false);
+                showDirections_knight(true, true, true, true, false, false, false, false);
             }
         }
     }
 
-    private void showDirections(bool opt1, bool opt2, bool opt3, bool opt4, bool opt5, bool opt6, bool opt7, bool opt8)
+    private void showDirections_knight(bool opt1, bool opt2, bool opt3, bool opt4, bool opt5, bool opt6, bool opt7, bool opt8)
     {
         if (opt1)
         {
@@ -415,8 +416,8 @@ public class KnightScript : MonoBehaviour
         knight.transform.position = knight.transform.position + new Vector3(6.0f, 0.0f, 0.0f);
         knight.transform.position = knight.transform.position + new Vector3(0.0f, 0.0f, 6.0f);
         knight.transform.position = knight.transform.position + new Vector3(0.0f, 0.0f, 6.0f);
-        DeleteArrows();
-        checkTarget();
+        DeleteArrows_knight();
+        checkTarget_knight();
     }
 
     public void Move_Left_Front_Front() // #8
@@ -424,8 +425,8 @@ public class KnightScript : MonoBehaviour
         knight.transform.position = knight.transform.position + new Vector3(-6.0f, 0.0f, 0.0f);
         knight.transform.position = knight.transform.position + new Vector3(0.0f, 0.0f, 6.0f);
         knight.transform.position = knight.transform.position + new Vector3(0.0f, 0.0f, 6.0f);
-        DeleteArrows();
-        checkTarget();
+        DeleteArrows_knight();
+        checkTarget_knight();
     }
 
     public void Move_Right_Right_Front() // #2
@@ -433,8 +434,8 @@ public class KnightScript : MonoBehaviour
         knight.transform.position = knight.transform.position + new Vector3(6.0f, 0.0f, 0.0f);
         knight.transform.position = knight.transform.position + new Vector3(6.0f, 0.0f, 0.0f);
         knight.transform.position = knight.transform.position + new Vector3(0.0f, 0.0f, 6.0f);
-        DeleteArrows();
-        checkTarget();
+        DeleteArrows_knight();
+        checkTarget_knight();
     }
 
     public void Move_Right_Right_Back() // #3
@@ -442,43 +443,43 @@ public class KnightScript : MonoBehaviour
         knight.transform.position = knight.transform.position + new Vector3(6.0f, 0.0f, 0.0f);
         knight.transform.position = knight.transform.position + new Vector3(6.0f, 0.0f, 0.0f);
         knight.transform.position = knight.transform.position + new Vector3(0.0f, 0.0f, -6.0f);
-        DeleteArrows();
-        checkTarget();
+        DeleteArrows_knight();
+        checkTarget_knight();
     }
     public void Move_Right_Back_Back() // #4
     {
         knight.transform.position = knight.transform.position + new Vector3(6.0f, 0.0f, 0.0f);
         knight.transform.position = knight.transform.position + new Vector3(0.0f, 0.0f, -6.0f);
         knight.transform.position = knight.transform.position + new Vector3(0.0f, 0.0f, -6.0f);
-        DeleteArrows();
-        checkTarget();
+        DeleteArrows_knight();
+        checkTarget_knight();
     }
     public void Move_Left_Back_Back() // #5
     {
         knight.transform.position = knight.transform.position + new Vector3(-6.0f, 0.0f, 0.0f);
         knight.transform.position = knight.transform.position + new Vector3(0.0f, 0.0f, -6.0f);
         knight.transform.position = knight.transform.position + new Vector3(0.0f, 0.0f, -6.0f);
-        DeleteArrows();
-        checkTarget();
+        DeleteArrows_knight();
+        checkTarget_knight();
     }
     public void Move_Left_Left_Back() // #6
     {
         knight.transform.position = knight.transform.position + new Vector3(-6.0f, 0.0f, 0.0f);
         knight.transform.position = knight.transform.position + new Vector3(-6.0f, 0.0f, 0.0f);
         knight.transform.position = knight.transform.position + new Vector3(0.0f, 0.0f, -6.0f);
-        DeleteArrows();
-        checkTarget();
+        DeleteArrows_knight();
+        checkTarget_knight();
     }
     public void Move_Left_Left_Front() // #7
     {
         knight.transform.position = knight.transform.position + new Vector3(-6.0f, 0.0f, 0.0f);
         knight.transform.position = knight.transform.position + new Vector3(-6.0f, 0.0f, 0.0f);
         knight.transform.position = knight.transform.position + new Vector3(0.0f, 0.0f, 6.0f);
-        DeleteArrows();
-        checkTarget();
+        DeleteArrows_knight();
+        checkTarget_knight();
     }
 
-    private void DeleteArrows()
+    private void DeleteArrows_knight()
     {
         sphere1.SetActive(false);
         sphere2.SetActive(false);
@@ -492,26 +493,25 @@ public class KnightScript : MonoBehaviour
 
     public void beginKnight()
     {
-        knight.SetActive(true);
         buttonLevels.SetActive(false);
         back2pieces.SetActive(false);
     }
 
-    public void showLevels()
+    public void showLevels_knight()
     {
         buttonLevels.SetActive(true);
         buttonPieces.SetActive(false);
         back2scenes.SetActive(false);
         back2pieces.SetActive(true);
-        DeleteArrows();
+        DeleteArrows_knight();
         target.SetActive(false);
         cameraRig.transform.position = new Vector3(2.03f, 9.11f, -32.28f);
         cameraRig.transform.rotation = new Quaternion(0.0f, 0.0f, 0.0f, 0.0f);
     }
 
-    public void endGame()
+    public void endGame_knight()
     {
-        DeleteArrows();
+        DeleteArrows_knight();
         buttonLevels.SetActive(false);
         knight.SetActive(false);
         buttonPieces.SetActive(true);
