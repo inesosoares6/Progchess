@@ -9,7 +9,6 @@ public class TowerScript : MonoBehaviour
     public GameObject tower;
     public GameObject tower2;
     public GameObject cameraRig;
-    public GameObject chessBoard;
     public GameObject buttonPieces;
     public GameObject buttonLevels;
     public GameObject target;

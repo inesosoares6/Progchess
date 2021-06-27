@@ -5,9 +5,11 @@ using UnityEngine;
 public class ManagerPieces : MonoBehaviour
 {
     public GameObject knight;
-    public GameObject tower;
     public KnightScript knightScript;
+    public GameObject tower;
     public TowerScript towerScript;
+    public GameObject bishop;
+    public BishopScript bishopScript;
 
     public void initiateKnight()
     {
@@ -19,7 +21,6 @@ public class ManagerPieces : MonoBehaviour
     {
         tower.SetActive(true);
         towerScript.showLevels_tower();
-        Debug.Log("Initiated Tower");
     }
 
     public void initiatePawn()
@@ -39,6 +40,7 @@ public class ManagerPieces : MonoBehaviour
 
     public void initiateBishop()
     {
-
+        bishop.SetActive(true);
+        bishopScript.showLevels_bishop();
     }
 }

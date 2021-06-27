@@ -7,7 +7,6 @@ public class KnightScript : MonoBehaviour
 {
     public GameObject knight;
     public GameObject cameraRig;
-    public GameObject chessBoard;
     public GameObject buttonPieces;
     public GameObject buttonLevels;
     public GameObject sphere1;
