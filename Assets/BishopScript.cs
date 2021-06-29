@@ -315,9 +315,9 @@ public class BishopScript : MonoBehaviour
         spheres["sphere" + count_spheres].transform.localScale = new Vector3(3, 3, 3);
     }
 
-    public void Move_bishop(GameObject towerDirection)
+    public void Move_bishop(GameObject kingDirection)
     {
-        objectBishop.transform.position = towerDirection.transform.position;
+        objectBishop.transform.position = kingDirection.transform.position;
         DeleteArrows_bishop();
         checkTarget_bishop();
     }
@@ -351,6 +351,7 @@ public class BishopScript : MonoBehaviour
         bishop2.SetActive(false);
         cameraRig.transform.position = new Vector3(2.03f, 9.11f, -32.28f);
         cameraRig.transform.rotation = new Quaternion(0.0f, 0.0f, 0.0f, 0.0f);
+        bishop.transform.position = new Vector3(-21.0f, 0.0f, 21.0f);
     }
 
     public void endGame_bishop()

@@ -308,6 +308,7 @@ public class TowerScript : MonoBehaviour
         tower2.SetActive(false);
         cameraRig.transform.position = new Vector3(2.03f, 9.11f, -32.28f);
         cameraRig.transform.rotation = new Quaternion(0.0f, 0.0f, 0.0f, 0.0f);
+        tower.transform.position = new Vector3(-21.0f, 0.0f, 21.0f);
     }
 
     public void endGame_tower()
