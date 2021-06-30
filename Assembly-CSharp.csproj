@@ -191,6 +191,7 @@
     <Compile Include="Assets\GoogleVR\Scripts\Video\GvrVideoPlayerTexture.cs" />
     <Compile Include="Assets\KingScript.cs" />
     <Compile Include="Assets\ManagerPieces.cs" />
+    <Compile Include="Assets\PawnScript.cs" />
     <Compile Include="Assets\Queen.cs" />
     <Compile Include="Assets\QueenScript.cs" />
     <Compile Include="Assets\Scripts\ChangeColor.cs" />
