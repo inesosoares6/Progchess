@@ -64,7 +64,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\BishopScript.cs" />
     <Compile Include="Assets\GoogleVR\Beta\Demos\Scripts\DemoObjectController6DoF.cs" />
     <Compile Include="Assets\GoogleVR\Beta\Demos\Scripts\DemoSeeThroughController.cs" />
     <Compile Include="Assets\GoogleVR\Beta\Scripts\GvrBetaControllerInput.cs" />
@@ -189,27 +188,28 @@
     <Compile Include="Assets\GoogleVR\Scripts\Utilities\Internal\GvrCursorHelper.cs" />
     <Compile Include="Assets\GoogleVR\Scripts\Utilities\Internal\SuppressMemoryAllocationErrorAttribute.cs" />
     <Compile Include="Assets\GoogleVR\Scripts\Video\GvrVideoPlayerTexture.cs" />
-    <Compile Include="Assets\KingScript.cs" />
-    <Compile Include="Assets\ManagerPieces.cs" />
-    <Compile Include="Assets\PawnScript.cs" />
-    <Compile Include="Assets\Queen.cs" />
-    <Compile Include="Assets\QueenScript.cs" />
+    <Compile Include="Assets\Scripts\BishopScript.cs" />
     <Compile Include="Assets\Scripts\ChangeColor.cs" />
     <Compile Include="Assets\Scripts\ChessBoardScript.cs" />
     <Compile Include="Assets\Scripts\CubePosition.cs" />
     <Compile Include="Assets\Scripts\Functions.cs" />
     <Compile Include="Assets\Scripts\IdentificationManager.cs" />
+    <Compile Include="Assets\Scripts\KingScript.cs" />
     <Compile Include="Assets\Scripts\KnightScript.cs" />
     <Compile Include="Assets\Scripts\Level1Script.cs" />
     <Compile Include="Assets\Scripts\Level2Script.cs" />
     <Compile Include="Assets\Scripts\Level3Script.cs" />
     <Compile Include="Assets\Scripts\Level4Script.cs" />
+    <Compile Include="Assets\Scripts\ManagerPieces.cs" />
     <Compile Include="Assets\Scripts\ManagerScript.cs" />
     <Compile Include="Assets\Scripts\MoveCamera.cs" />
     <Compile Include="Assets\Scripts\Movements.cs" />
+    <Compile Include="Assets\Scripts\PawnScript.cs" />
+    <Compile Include="Assets\Scripts\QueenScript.cs" />
+    <Compile Include="Assets\Scripts\Test_CreateSphere.cs" />
+    <Compile Include="Assets\Scripts\Test_forCycle.cs" />
     <Compile Include="Assets\Scripts\TowerScript.cs" />
-    <Compile Include="Assets\Test_CreateSphere.cs" />
-    <Compile Include="Assets\Test_forCycle.cs" />
+    <Compile Include="Assets\TestMovePiece.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
