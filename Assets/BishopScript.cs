@@ -315,9 +315,9 @@ public class BishopScript : MonoBehaviour
         spheres["sphere" + count_spheres].transform.localScale = new Vector3(3, 3, 3);
     }
 
-    public void Move_bishop(GameObject kingDirection)
+    public void Move_bishop(GameObject bishopDirection)
     {
-        objectBishop.transform.position = kingDirection.transform.position;
+        objectBishop.transform.position = bishopDirection.transform.position;
         DeleteArrows_bishop();
         checkTarget_bishop();
     }
