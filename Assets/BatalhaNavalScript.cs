@@ -75,6 +75,9 @@ public class BatalhaNavalScript : MonoBehaviour
     public GameObject whiteSquares32;
     Dictionary<string, GameObject> blackSquares = new Dictionary<string, GameObject>();
     Dictionary<string, GameObject> whiteSquares = new Dictionary<string, GameObject>();
+    private GameObject objectClicked;
+    private string piece;
+    private string objectColor;
 
     // Start is called before the first frame update
     void Start()
@@ -163,6 +166,75 @@ public class BatalhaNavalScript : MonoBehaviour
             i++;
             blackSquares["blackSquares" + i].GetComponent<Renderer>().material.color = Color.black;
             whiteSquares["whiteSquares" + i].GetComponent<Renderer>().material.color = Color.white;
+        }
+    }
+
+    public void clickQueen(GameObject square)
+    {
+        objectClicked = square;
+        piece = "queen";
+    }
+
+    public void clickPawn(GameObject square)
+    {
+        objectClicked = square;
+        piece = "pawn";
+    }
+
+    public void clickTower(GameObject square)
+    {
+        objectClicked = square;
+        piece = "tower";
+    }
+
+    public void clickBishop(GameObject square)
+    {
+        objectClicked = square;
+        piece = "bishop";
+    }
+
+    public void clickKnight(GameObject square)
+    {
+        objectClicked = square;
+        piece = "knight";
+    }
+
+    public void clickSquareWall(GameObject square)
+    {
+        switch (piece)
+        {
+            case "queen":
+                queen.transform.position = square.transform.position + queen.transform.position - objectClicked.transform.position + new Vector3(0.0f, 0.0f, -0.01f);
+                break;
+            case "pawn":
+                pawn.transform.position = square.transform.position + pawn.transform.position - objectClicked.transform.position + new Vector3(0.0f, 0.0f, -0.01f);
+                break;
+            case "tower":
+                tower.transform.position = square.transform.position + tower.transform.position - objectClicked.transform.position + new Vector3(0.0f, 0.0f, -0.01f);
+                break;
+            case "bishop":
+                bishop.transform.position = square.transform.position + bishop.transform.position - objectClicked.transform.position + new Vector3(0.0f, 0.0f, -0.01f);
+                break;
+            case "knight":
+                knight.transform.position = square.transform.position + knight.transform.position - objectClicked.transform.position + new Vector3(0.0f, 0.0f, -0.01f);
+                break;
+        }
+    }
+
+    public void defineSquareColor(string color)
+    {
+        objectColor = color;
+    }
+
+    public void clickSquareFloor(GameObject square)
+    {
+        if(objectColor == "red")
+        {
+            square.GetComponent<ChangeColor>().Red();
+        }
+        else if (objectColor == "green")
+        {
+            square.GetComponent<ChangeColor>().Green();
         }
     }
 }
