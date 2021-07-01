@@ -28,4 +28,9 @@ public class ChangeColor : MonoBehaviour
     {
         GetComponent<Renderer>().material.color = Color.white;
     }
+
+    public void Yellow()
+    {
+        GetComponent<Renderer>().material.color = Color.yellow;
+    }
 }
