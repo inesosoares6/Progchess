@@ -3,6 +3,7 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - BatalhaNavalScript
     - BishopScript
+    - BoardSetupLevel2
     - BoardSetupLevel3
     - BoardSetupLevel4
     - BoardSetupManager
@@ -203,6 +204,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 13568}
     - Class: 114
       Script: {instanceID: 13598}
+    - Class: 114
+      Script: {instanceID: 13726}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -573,7 +576,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13648}
     - Class: 114
-      Script: {instanceID: 13742}
+      Script: {instanceID: 13744}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -615,7 +618,7 @@ ScriptsOnlyBuild:
     className: Button
   - hash:
       serializedVersion: 2
-      Hash: 3ba5515b925a5fdb17ed6027876244b3
+      Hash: 67f497477c4d2dee946348d116a88bac
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BoardSetupLevel4
@@ -1401,7 +1404,7 @@ ScriptsOnlyBuild:
     className: VertexZoom
   - hash:
       serializedVersion: 2
-      Hash: 05a6f8a3d30277cfcbf1a366efdf5edb
+      Hash: 37b8031f2341d0b82dc08be02336d24c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BoardSetupLevel3
@@ -1639,6 +1642,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: GoogleVR.Beta
     className: GvrBetaControllerVisualMulti
+  - hash:
+      serializedVersion: 2
+      Hash: 78e55e425e3a395c966d2804b1e002a1
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BoardSetupLevel2
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb

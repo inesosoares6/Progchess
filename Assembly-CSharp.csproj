@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\BatalhaNavalScript.cs" />
+    <Compile Include="Assets\BoardSetupLevel2.cs" />
     <Compile Include="Assets\BoardSetupLevel3.cs" />
     <Compile Include="Assets\BoardSetupLevel4.cs" />
     <Compile Include="Assets\BoardSetupManager.cs" />

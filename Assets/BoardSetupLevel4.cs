@@ -5,6 +5,7 @@ using System;
 
 public class BoardSetupLevel4 : MonoBehaviour
 {
+    public GameObject board;
     public GameObject pieces;
     public GameObject levels;
     public GameObject b_king;
@@ -47,8 +48,6 @@ public class BoardSetupLevel4 : MonoBehaviour
     private string material;
     public GameObject back2scenesButton;
     public GameObject back2levelsButton;
-    public Material blackPieces;
-    public Material whitePieces;
 
     public void checkAnswer_white(Vector3 position)
     {
@@ -118,86 +117,41 @@ public class BoardSetupLevel4 : MonoBehaviour
     {
         objectClicked = square;
         piece = "queen";
-        if(square.GetComponent<Material>() == blackPieces)
-        {
-            material = "black";
-        }
-        else if(square.GetComponent<Material>() == whitePieces)
-        {
-            material = "white";
-        }
     }
 
     public void clickPawn(GameObject square)
     {
         objectClicked = square;
         piece = "pawn";
-        if (square.GetComponent<Material>() == blackPieces)
-        {
-            material = "black";
-        }
-        else if (square.GetComponent<Material>() == whitePieces)
-        {
-            material = "white";
-        }
     }
 
     public void clickTower(GameObject square)
     {
         objectClicked = square;
         piece = "tower";
-        if (square.GetComponent<Material>() == blackPieces)
-        {
-            material = "black";
-        }
-        else if (square.GetComponent<Material>() == whitePieces)
-        {
-            material = "white";
-        }
     }
 
     public void clickBishop(GameObject square)
     {
         objectClicked = square;
         piece = "bishop";
-        if (square.GetComponent<Material>() == blackPieces)
-        {
-            material = "black";
-        }
-        else if (square.GetComponent<Material>() == whitePieces)
-        {
-            material = "white";
-        }
     }
 
     public void clickKnight(GameObject square)
     {
         objectClicked = square;
         piece = "knight";
-        if (square.GetComponent<Material>() == blackPieces)
-        {
-            material = "black";
-        }
-        else if (square.GetComponent<Material>() == whitePieces)
-        {
-            material = "white";
-        }
     }
 
     public void clickKing(GameObject square)
     {
         objectClicked = square;
         piece = "king";
-        if (square.GetComponent<Material>() == blackPieces)
-        {
-            material = "black";
-            Debug.Log("Black Piece");
-        }
-        else if (square.GetComponent<Material>() == whitePieces)
-        {
-            material = "white";
-            Debug.Log("White Piece");
-        }
+    }
+
+    public void defineColor(string color)
+    {
+        material = color;
     }
 
     public void clickSquare(GameObject square)
@@ -257,12 +211,14 @@ public class BoardSetupLevel4 : MonoBehaviour
         restartButton.SetActive(true);
         back2scenesButton.SetActive(false);
         back2levelsButton.SetActive(true);
+        board.SetActive(true);
     }
 
     public void back2levels()
     {
         pieces.SetActive(false);
         levels.SetActive(true);
+        board.SetActive(false);
         restartButton.SetActive(false);
         back2scenesButton.SetActive(true);
         back2levelsButton.SetActive(false);
