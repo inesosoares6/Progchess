@@ -66,6 +66,7 @@
   <ItemGroup>
     <Compile Include="Assets\BatalhaNavalScript.cs" />
     <Compile Include="Assets\BoardSetupLevel3.cs" />
+    <Compile Include="Assets\BoardSetupLevel4.cs" />
     <Compile Include="Assets\BoardSetupManager.cs" />
     <Compile Include="Assets\GoogleVR\Beta\Demos\Scripts\DemoObjectController6DoF.cs" />
     <Compile Include="Assets\GoogleVR\Beta\Demos\Scripts\DemoSeeThroughController.cs" />

@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Identification.unity
     guid: bfba6569e3a8b1148a4e12c750327edb
+  - enabled: 1
+    path: Assets/Scenes/BoardSetup.unity
+    guid: 01bff4fcc7756f64ca2c1a27775052d4
   m_configObjects: {}
