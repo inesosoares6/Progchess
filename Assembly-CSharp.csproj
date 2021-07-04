@@ -64,11 +64,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\BatalhaNavalScript.cs" />
-    <Compile Include="Assets\BoardSetupLevel2.cs" />
-    <Compile Include="Assets\BoardSetupLevel3.cs" />
-    <Compile Include="Assets\BoardSetupLevel4.cs" />
-    <Compile Include="Assets\BoardSetupManager.cs" />
     <Compile Include="Assets\GoogleVR\Beta\Demos\Scripts\DemoObjectController6DoF.cs" />
     <Compile Include="Assets\GoogleVR\Beta\Demos\Scripts\DemoSeeThroughController.cs" />
     <Compile Include="Assets\GoogleVR\Beta\Scripts\GvrBetaControllerInput.cs" />
@@ -193,7 +188,13 @@
     <Compile Include="Assets\GoogleVR\Scripts\Utilities\Internal\GvrCursorHelper.cs" />
     <Compile Include="Assets\GoogleVR\Scripts\Utilities\Internal\SuppressMemoryAllocationErrorAttribute.cs" />
     <Compile Include="Assets\GoogleVR\Scripts\Video\GvrVideoPlayerTexture.cs" />
+    <Compile Include="Assets\Scripts\BatalhaNavalScript.cs" />
     <Compile Include="Assets\Scripts\BishopScript.cs" />
+    <Compile Include="Assets\Scripts\BoardSetupLevel1.cs" />
+    <Compile Include="Assets\Scripts\BoardSetupLevel2.cs" />
+    <Compile Include="Assets\Scripts\BoardSetupLevel3.cs" />
+    <Compile Include="Assets\Scripts\BoardSetupLevel4.cs" />
+    <Compile Include="Assets\Scripts\BoardSetupManager.cs" />
     <Compile Include="Assets\Scripts\ChangeColor.cs" />
     <Compile Include="Assets\Scripts\ChessBoardScript.cs" />
     <Compile Include="Assets\Scripts\CubePosition.cs" />
@@ -211,10 +212,10 @@
     <Compile Include="Assets\Scripts\Movements.cs" />
     <Compile Include="Assets\Scripts\PawnScript.cs" />
     <Compile Include="Assets\Scripts\QueenScript.cs" />
+    <Compile Include="Assets\Scripts\TestMovePiece.cs" />
     <Compile Include="Assets\Scripts\Test_CreateSphere.cs" />
     <Compile Include="Assets\Scripts\Test_forCycle.cs" />
     <Compile Include="Assets\Scripts\TowerScript.cs" />
-    <Compile Include="Assets\TestMovePiece.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
