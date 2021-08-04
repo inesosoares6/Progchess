@@ -5,18 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class ManagerScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void sceneIdentifyPieces()
     {
         Debug.Log("Scene -> Identificar Peças");
@@ -32,7 +20,7 @@ public class ManagerScript : MonoBehaviour
     public void sceneMovementsPieces()
     {
         Debug.Log("Scene -> Movimentos das Peças");
-        SceneManager.LoadScene("Movements");
+        SceneManager.LoadScene("Movements2.0");
     }
 
     public void sceneBoardSetup()
