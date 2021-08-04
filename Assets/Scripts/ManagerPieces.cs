@@ -5,7 +5,7 @@ using UnityEngine;
 public class ManagerPieces : MonoBehaviour
 {
     public GameObject knight;
-    public KnightScript knightScript;
+    public KnightScript2 knightScript2;
     public GameObject tower;
     public TowerScript towerScript;
     public GameObject bishop;
@@ -20,7 +20,7 @@ public class ManagerPieces : MonoBehaviour
     public void initiateKnight()
     {
         knight.SetActive(true);
-        knightScript.showLevels_knight();
+        knightScript2.showLevels_knight();
     }
 
     public void initiateTower()
