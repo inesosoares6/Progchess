@@ -191,6 +191,7 @@
     <Compile Include="Assets\GoogleVR\Scripts\Video\GvrVideoPlayerTexture.cs" />
     <Compile Include="Assets\KingScript2.cs" />
     <Compile Include="Assets\KnightScript2.cs" />
+    <Compile Include="Assets\PawnScript2.cs" />
     <Compile Include="Assets\QueenScript2.cs" />
     <Compile Include="Assets\Scripts\BatalhaNavalScript.cs" />
     <Compile Include="Assets\Scripts\BishopScript.cs" />

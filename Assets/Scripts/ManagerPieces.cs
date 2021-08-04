@@ -15,7 +15,7 @@ public class ManagerPieces : MonoBehaviour
     public GameObject queen;
     public QueenScript2 queenScript2;
     public GameObject pawn;
-    public PawnScript pawnScript;
+    public PawnScript2 pawnScript2;
 
     public void initiateKnight()
     {
@@ -32,7 +32,7 @@ public class ManagerPieces : MonoBehaviour
     public void initiatePawn()
     {
         pawn.SetActive(true);
-        pawnScript.showLevels_pawn();
+        pawnScript2.showLevels_pawn();
     }
 
     public void initiateKing()

@@ -413,6 +413,18 @@ PrefabInstance:
       value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 4000012297859478, guid: 3605a6e4fde7d594aa08481185959edb, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012297859478, guid: 3605a6e4fde7d594aa08481185959edb, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012297859478, guid: 3605a6e4fde7d594aa08481185959edb, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012297859478, guid: 3605a6e4fde7d594aa08481185959edb, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0
       objectReference: {fileID: 0}
@@ -5489,11 +5501,11 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 996697288}
           m_MethodName: clicked_pawn
-          m_Mode: 2
+          m_Mode: 3
           m_Arguments:
-            m_ObjectArgument: {fileID: 496093950}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-            m_IntArgument: 0
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 3
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
@@ -6446,6 +6458,18 @@ PrefabInstance:
     - target: {fileID: 4000012297859478, guid: 3605a6e4fde7d594aa08481185959edb, type: 3}
       propertyPath: m_RootOrder
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012297859478, guid: 3605a6e4fde7d594aa08481185959edb, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012297859478, guid: 3605a6e4fde7d594aa08481185959edb, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012297859478, guid: 3605a6e4fde7d594aa08481185959edb, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 4000012297859478, guid: 3605a6e4fde7d594aa08481185959edb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8141,13 +8165,13 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 996697288}
           m_MethodName: clicked_pawn
-          m_Mode: 2
+          m_Mode: 3
           m_Arguments:
-            m_ObjectArgument: {fileID: 698097740}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-            m_IntArgument: 0
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 4
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
@@ -10929,11 +10953,11 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 996697288}
           m_MethodName: clicked_pawn
-          m_Mode: 2
+          m_Mode: 3
           m_Arguments:
-            m_ObjectArgument: {fileID: 909056778}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-            m_IntArgument: 0
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 2
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
@@ -11488,23 +11512,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 996697287}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 391947a524be99f4cba100a9e23ffe60, type: 3}
+  m_Script: {fileID: 11500000, guid: 9b98d2cd430147f4cba1902a2a000ca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pawn: {fileID: 996697287}
   pawn2: {fileID: 909056778}
   pawn3: {fileID: 496093950}
   pawn4: {fileID: 698097740}
-  cameraRig: {fileID: 0}
   buttonPieces: {fileID: 1597287723}
   buttonLevels: {fileID: 1153960772}
-  target: {fileID: 0}
-  target2: {fileID: 0}
-  target3: {fileID: 0}
-  target4: {fileID: 0}
-  target5: {fileID: 0}
-  back2scenes: {fileID: 0}
-  back2pieces: {fileID: 0}
+  back2scenes: {fileID: 380423646}
+  back2pieces: {fileID: 1246444415}
   rightAnswer: {fileID: 996697290}
   levelUp: {fileID: 996697289}
 --- !u!82 &996697289
@@ -11760,11 +11778,11 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 996697288}
           m_MethodName: clicked_pawn
-          m_Mode: 2
+          m_Mode: 3
           m_Arguments:
-            m_ObjectArgument: {fileID: 996697287}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-            m_IntArgument: 0
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 1
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
@@ -12426,8 +12444,8 @@ MonoBehaviour:
   kingScript2: {fileID: 1319824269}
   queen: {fileID: 1640037094}
   queenScript2: {fileID: 1640037095}
-  pawn: {fileID: 0}
-  pawnScript: {fileID: 0}
+  pawn: {fileID: 996697287}
+  pawnScript2: {fileID: 996697288}
 --- !u!114 &1080712985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14021,6 +14039,157 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1240366801}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1246444415
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1246444422}
+  - component: {fileID: 1246444421}
+  - component: {fileID: 1246444420}
+  - component: {fileID: 1246444419}
+  - component: {fileID: 1246444418}
+  - component: {fileID: 1246444417}
+  - component: {fileID: 1246444416}
+  m_Layer: 0
+  m_Name: BackButtonPieces_pawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!65 &1246444416
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1246444415}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0000002, y: 2.0000005, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1246444417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1246444415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 996697288}
+          m_MethodName: endGame_pawn
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!222 &1246444418
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1246444415}
+  m_CullTransparentMesh: 0
+--- !u!136 &1246444419
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1246444415}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1246444420
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1246444415}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: e922a475f5951d149b143574a83c0b65, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1246444421
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1246444415}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!224 &1246444422
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1246444415}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 24
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 15.14, y: 14.2}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1261240007
 GameObject:
   m_ObjectHideFlags: 0
@@ -17029,6 +17198,18 @@ PrefabInstance:
       value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 4000012297859478, guid: 3605a6e4fde7d594aa08481185959edb, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012297859478, guid: 3605a6e4fde7d594aa08481185959edb, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012297859478, guid: 3605a6e4fde7d594aa08481185959edb, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012297859478, guid: 3605a6e4fde7d594aa08481185959edb, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0
       objectReference: {fileID: 0}
@@ -18799,6 +18980,18 @@ PrefabInstance:
     - target: {fileID: 4000012297859478, guid: 3605a6e4fde7d594aa08481185959edb, type: 3}
       propertyPath: m_RootOrder
       value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012297859478, guid: 3605a6e4fde7d594aa08481185959edb, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012297859478, guid: 3605a6e4fde7d594aa08481185959edb, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012297859478, guid: 3605a6e4fde7d594aa08481185959edb, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 4000012297859478, guid: 3605a6e4fde7d594aa08481185959edb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -21073,7 +21266,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1080712984}
         m_MethodName: initiatePawn
         m_Mode: 1
         m_Arguments:
