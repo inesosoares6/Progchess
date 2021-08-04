@@ -13,7 +13,7 @@ public class ManagerPieces : MonoBehaviour
     public GameObject king;
     public KingScript kingScript;
     public GameObject queen;
-    public QueenScript queenScript;
+    public QueenScript2 queenScript2;
     public GameObject pawn;
     public PawnScript pawnScript;
 
@@ -44,7 +44,7 @@ public class ManagerPieces : MonoBehaviour
     public void initiateQueen()
     {
         queen.SetActive(true);
-        queenScript.showLevels_queen();
+        queenScript2.showLevels_queen();
     }
 
     public void initiateBishop()

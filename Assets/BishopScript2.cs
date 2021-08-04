@@ -316,11 +316,11 @@ public class BishopScript2 : MonoBehaviour
     public void Move_bishop(GameObject bishopDirection)
     {
         objectBishop.transform.position = bishopDirection.transform.position;
-        DeleteArrows_bishop();
+        DeleteSquares_bishop();
         checkTarget_bishop();
     }
 
-    private void DeleteArrows_bishop()
+    private void DeleteSquares_bishop()
     {
         for (int j = 1; j < 15; j++)
         {
@@ -342,7 +342,7 @@ public class BishopScript2 : MonoBehaviour
         back2pieces.SetActive(true);
         if (squares_introduced)
         {
-            DeleteArrows_bishop();
+            DeleteSquares_bishop();
             targets["target1"].SetActive(false);
             targets["target2"].SetActive(false);
         }
@@ -352,7 +352,7 @@ public class BishopScript2 : MonoBehaviour
 
     public void endGame_bishop()
     {
-        DeleteArrows_bishop();
+        DeleteSquares_bishop();
         buttonLevels.SetActive(false);
         bishop.SetActive(false);
         bishop2.SetActive(false);

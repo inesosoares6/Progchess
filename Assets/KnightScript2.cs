@@ -456,11 +456,11 @@ public class KnightScript2 : MonoBehaviour
     public void Move_knight(GameObject knightDirection)
     {
         knight.transform.position = knightDirection.transform.position;
-        DeleteArrows_knight();
+        DeleteSquares_knight();
         checkTarget_knight();
     }
 
-    private void DeleteArrows_knight()
+    private void DeleteSquares_knight()
     {
         for (int j = 1; j < 9; j++)
         {
@@ -482,7 +482,7 @@ public class KnightScript2 : MonoBehaviour
         back2pieces.SetActive(true);
         if (squares_introduced)
         {
-            DeleteArrows_knight();
+            DeleteSquares_knight();
             target.SetActive(false);
         }
         knight.transform.position = new Vector3(-4.375f, 0.0f, 4.375f);
@@ -490,7 +490,7 @@ public class KnightScript2 : MonoBehaviour
 
     public void endGame_knight()
     {
-        DeleteArrows_knight();
+        DeleteSquares_knight();
         buttonLevels.SetActive(false);
         knight.SetActive(false);
         buttonPieces.SetActive(true);
