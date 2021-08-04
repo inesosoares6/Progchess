@@ -7,7 +7,7 @@ public class ManagerPieces : MonoBehaviour
     public GameObject knight;
     public KnightScript2 knightScript2;
     public GameObject tower;
-    public TowerScript towerScript;
+    public TowerScript2 towerScript2;
     public GameObject bishop;
     public BishopScript2 bishopScript2;
     public GameObject king;
@@ -26,7 +26,7 @@ public class ManagerPieces : MonoBehaviour
     public void initiateTower()
     {
         tower.SetActive(true);
-        towerScript.showLevels_tower();
+        towerScript2.showLevels_tower();
     }
 
     public void initiatePawn()
