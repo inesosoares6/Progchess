@@ -407,49 +407,49 @@ public class KnightScript2 : MonoBehaviour
         if (opt1)
         {
             squares["square1"].SetActive(true);
-            squares["square1"].transform.position = knight.transform.position + new Vector3(1.25f, 0.011f, 2.5f);
+            squares["square1"].transform.position = knight.transform.position + new Vector3(1.25f, 0.0101f, 2.5f);
         }
 
         if (opt2)
         {
             squares["square2"].SetActive(true);
-            squares["square2"].transform.position = knight.transform.position + new Vector3(2.5f, 0.011f, 1.25f);
+            squares["square2"].transform.position = knight.transform.position + new Vector3(2.5f, 0.0101f, 1.25f);
         }
 
         if (opt3)
         {
             squares["square3"].SetActive(true);
-            squares["square3"].transform.position = knight.transform.position + new Vector3(2.5f, 0.011f, -1.25f);
+            squares["square3"].transform.position = knight.transform.position + new Vector3(2.5f, 0.0101f, -1.25f);
         }
 
         if (opt4)
         {
             squares["square4"].SetActive(true);
-            squares["square4"].transform.position = knight.transform.position + new Vector3(1.25f, 0.011f, -2.5f);
+            squares["square4"].transform.position = knight.transform.position + new Vector3(1.25f, 0.0101f, -2.5f);
         }
 
         if (opt5)
         {
             squares["square5"].SetActive(true);
-            squares["square5"].transform.position = knight.transform.position + new Vector3(-1.25f, 0.011f, -2.5f);
+            squares["square5"].transform.position = knight.transform.position + new Vector3(-1.25f, 0.0101f, -2.5f);
         }
 
         if (opt6)
         {
             squares["square6"].SetActive(true);
-            squares["square6"].transform.position = knight.transform.position + new Vector3(-2.5f, 0.011f, -1.25f);
+            squares["square6"].transform.position = knight.transform.position + new Vector3(-2.5f, 0.0101f, -1.25f);
         }
 
         if (opt7)
         {
             squares["square7"].SetActive(true);
-            squares["square7"].transform.position = knight.transform.position + new Vector3(-2.5f, 0.011f, 1.25f);
+            squares["square7"].transform.position = knight.transform.position + new Vector3(-2.5f, 0.0101f, 1.25f);
         }
 
         if (opt8)
         {
             squares["square8"].SetActive(true);
-            squares["square8"].transform.position = knight.transform.position + new Vector3(-1.25f, 0.011f, 2.5f);
+            squares["square8"].transform.position = knight.transform.position + new Vector3(-1.25f, 0.0101f, 2.5f);
         }
     }
 

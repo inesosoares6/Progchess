@@ -9,7 +9,7 @@ public class ManagerPieces : MonoBehaviour
     public GameObject tower;
     public TowerScript towerScript;
     public GameObject bishop;
-    public BishopScript bishopScript;
+    public BishopScript2 bishopScript2;
     public GameObject king;
     public KingScript kingScript;
     public GameObject queen;
@@ -50,6 +50,6 @@ public class ManagerPieces : MonoBehaviour
     public void initiateBishop()
     {
         bishop.SetActive(true);
-        bishopScript.showLevels_bishop();
+        bishopScript2.showLevels_bishop();
     }
 }
