@@ -28,4 +28,10 @@ public class ManagerScript : MonoBehaviour
         Debug.Log("Scene -> Board Setup");
         SceneManager.LoadScene("BoardSetup");
     }
+
+    public void sceneAtaquesRei()
+    {
+        Debug.Log("Scene -> Ataques Rei");
+        SceneManager.LoadScene("AtaquesRei");
+    }
 }
