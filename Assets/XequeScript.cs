@@ -36,7 +36,7 @@ public class XequeScript : MonoBehaviour
 
     private void Start()
     {
-        introduce24squares();
+        introduce30squares();
         count_squares = 0;
     }
 
@@ -144,14 +144,14 @@ public class XequeScript : MonoBehaviour
 
     private void checkTarget_xeque()
     {
-        if(level==1 && tower_white.transform.position.x == king_black.transform.position.x && tower_white.transform.position.z == king_black.transform.position.z - 1.25f)
+        if(level == 1 && tower_white.transform.position.x == king_black.transform.position.x && tower_white.transform.position.z == king_black.transform.position.z - 1.25f)
         {
             tower_white.SetActive(false);
             king_black.SetActive(false);
             levelUp.Play(0);
             showLevels_xeque();
         }
-        else if (level == 2 && queen_white.transform.position.x == king_black.transform.position.x + 1.25f && queen_white.transform.position.z == king_black.transform.position.z - 1.25f)
+        else if (level == 2 && queen_white.transform.position.x == 1.875f && queen_white.transform.position.z == 0.625f)
         {
             queen_white.SetActive(false);
             knight_black.SetActive(false);
@@ -381,9 +381,9 @@ public class XequeScript : MonoBehaviour
         return square_aux;
     }
 
-    private void introduce24squares()
+    private void introduce30squares()
     {
-        while (count_squares < 24)
+        while (count_squares < 30)
         {
             count_squares++;
             squares.Add("square" + count_squares, createSquare());
@@ -401,7 +401,7 @@ public class XequeScript : MonoBehaviour
 
     private void DeleteSquares_xeque()
     {
-        for (int j = 1; j < 25; j++)
+        for (int j = 1; j < 31; j++)
         {
             squares["square" + j].SetActive(false);
         }
