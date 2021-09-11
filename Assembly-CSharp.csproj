@@ -188,9 +188,6 @@
     <Compile Include="Assets\GoogleVR\Scripts\Utilities\Internal\GvrCursorHelper.cs" />
     <Compile Include="Assets\GoogleVR\Scripts\Utilities\Internal\SuppressMemoryAllocationErrorAttribute.cs" />
     <Compile Include="Assets\GoogleVR\Scripts\Video\GvrVideoPlayerTexture.cs" />
-    <Compile Include="Assets\ManagerAtaquesRei.cs" />
-    <Compile Include="Assets\ReiAfogadoScript.cs" />
-    <Compile Include="Assets\SaidaXequeScript.cs" />
     <Compile Include="Assets\Scripts\BatalhaNavalScript.cs" />
     <Compile Include="Assets\Scripts\BishopScript.cs" />
     <Compile Include="Assets\Scripts\BishopScript2.cs" />
@@ -212,6 +209,7 @@
     <Compile Include="Assets\Scripts\Level2Script.cs" />
     <Compile Include="Assets\Scripts\Level3Script.cs" />
     <Compile Include="Assets\Scripts\Level4Script.cs" />
+    <Compile Include="Assets\Scripts\ManagerAtaquesRei.cs" />
     <Compile Include="Assets\Scripts\ManagerPieces.cs" />
     <Compile Include="Assets\Scripts\ManagerScript.cs" />
     <Compile Include="Assets\Scripts\MoveCamera.cs" />
@@ -220,11 +218,15 @@
     <Compile Include="Assets\Scripts\PawnScript2.cs" />
     <Compile Include="Assets\Scripts\QueenScript.cs" />
     <Compile Include="Assets\Scripts\QueenScript2.cs" />
+    <Compile Include="Assets\Scripts\ReiAfogadoScript.cs" />
+    <Compile Include="Assets\Scripts\SaidaXequeScript.cs" />
     <Compile Include="Assets\Scripts\TestMovePiece.cs" />
     <Compile Include="Assets\Scripts\Test_CreateSphere.cs" />
     <Compile Include="Assets\Scripts\Test_forCycle.cs" />
     <Compile Include="Assets\Scripts\TowerScript.cs" />
     <Compile Include="Assets\Scripts\TowerScript2.cs" />
+    <Compile Include="Assets\Scripts\XequeMateScript.cs" />
+    <Compile Include="Assets\Scripts\XequeScript.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
@@ -259,8 +261,6 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
-    <Compile Include="Assets\XequeMateScript.cs" />
-    <Compile Include="Assets\XequeScript.cs" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
