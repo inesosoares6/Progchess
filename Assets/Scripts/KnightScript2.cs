@@ -251,6 +251,7 @@ public class KnightScript2 : MonoBehaviour
 
     public void clicked_knight()
     {
+        count_squares = 0;
         showDirections_knight();
     }
 
