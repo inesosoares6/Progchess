@@ -10,8 +10,20 @@ public class SaidaXequeScript : MonoBehaviour
     public GameObject back2pieces;
     public GameObject back2scenes;
     public GameObject buttonPieces;
-    public AudioSource rightAnswer;
     public AudioSource levelUp;
+    public GameObject king_white;
+    public GameObject queen_black;
+    public GameObject bishop_black;
+    public GameObject knight_black;
+    public GameObject bishop_white;
+    public GameObject knight_white;
+    public GameObject tower_black1;
+    public GameObject tower_black2;
+    public GameObject tower_white;
+    public GameObject pawn_white1;
+    public GameObject pawn_white2;
+    public GameObject pawn_black;
+
     public void defineLevel_saidaxeque(int num)
     {
         level = num;

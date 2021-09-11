@@ -27,7 +27,6 @@ public class XequeScript : MonoBehaviour
     public GameObject back2pieces;
     public GameObject back2scenes;
     public GameObject buttonPieces;
-    public AudioSource rightAnswer;
     public AudioSource levelUp;
     private int count_squares = 0;
     Dictionary<string, GameObject> squares = new Dictionary<string, GameObject>();
@@ -144,14 +143,14 @@ public class XequeScript : MonoBehaviour
 
     private void checkTarget_xeque()
     {
-        if(level == 1 && tower_white.transform.position.x == king_black.transform.position.x && tower_white.transform.position.z == king_black.transform.position.z - 1.25f)
+        if (level == 1 && Math.Round(tower_white.transform.position.x, 3) == 0.625f && Math.Round(tower_white.transform.position.z, 3) == -4.375f)
         {
             tower_white.SetActive(false);
             king_black.SetActive(false);
             levelUp.Play(0);
             showLevels_xeque();
         }
-        else if (level == 2 && queen_white.transform.position.x == 1.875f && queen_white.transform.position.z == 0.625f)
+        else if (level == 2 && Math.Round(queen_white.transform.position.x, 3) == 4.375f && Math.Round(queen_white.transform.position.z, 3) == -1.875f)
         {
             queen_white.SetActive(false);
             knight_black.SetActive(false);
@@ -159,7 +158,7 @@ public class XequeScript : MonoBehaviour
             levelUp.Play(0);
             showLevels_xeque();
         }
-        else if(level == 3 && bishop_white.transform.position.x == king_black.transform.position.x - 1.25f && bishop_white.transform.position.z == king_black.transform.position.z - 1.25f)
+        else if(level == 3 && Math.Round(bishop_white.transform.position.x, 3) == -3.125f && Math.Round(bishop_white.transform.position.z, 3) == 0.625f)
         {
             king_black.SetActive(false);
             bishop_white.SetActive(false);
@@ -172,7 +171,7 @@ public class XequeScript : MonoBehaviour
             levelUp.Play(0);
             showLevels_xeque();
         }
-        else if(level == 4 && pawn1_white.transform.position.x == king_black.transform.position.x - 1.25f && pawn1_white.transform.position.z == king_black.transform.position.z - 1.25f)
+        else if(level == 4 && Math.Round(pawn1_white.transform.position.x, 3) == -0.625f && Math.Round(pawn1_white.transform.position.z, 3) == -0.625f)
         {
             king_black.SetActive(false);
             queen_black.SetActive(false);
@@ -183,11 +182,19 @@ public class XequeScript : MonoBehaviour
             levelUp.Play(0);
             showLevels_xeque();
         }
-        else if(level == 5 )
+        else if (level == 5 && Math.Round(knight_white.transform.position.x, 3) == 0.625f && Math.Round(knight_white.transform.position.z, 3) == -0.625f)
         {
-            //TODO
+            king_black.SetActive(false);
+            queen_black.SetActive(false);
+            knight_black.SetActive(false);
+            knight_white.SetActive(false);
+            pawn1_black.SetActive(false);
+            pawn2_black.SetActive(false);
+            bishop_black.SetActive(false);
+            levelUp.Play(0);
+            showLevels_xeque();
         }
-        else if(level == 6 && tower_white.transform.position.x == king_black.transform.position.x && tower_white.transform.position.z == king_black.transform.position.z + 1.25f || queen_white.transform.position.x == king_black.transform.position.x && queen_white.transform.position.z == king_black.transform.position.z + 1.25f)
+        else if(level == 6 && ((Math.Round(tower_white.transform.position.x, 3) == -3.125f && Math.Round(tower_white.transform.position.z, 3) == 4.375f) || (Math.Round(queen_white.transform.position.x, 3) == -3.125f && Math.Round(queen_white.transform.position.z, 3) == 4.375f)))
         {
             king_black.SetActive(false);
             knight_black.SetActive(false);
@@ -197,11 +204,17 @@ public class XequeScript : MonoBehaviour
             levelUp.Play(0);
             showLevels_xeque();
         }
-        else if(level == 7)
+        else if(level == 7 && ((Math.Round(knight_white.transform.position.x, 3) == -0.625f && Math.Round(knight_white.transform.position.z, 3) == 1.875f) || (Math.Round(knight_white.transform.position.x, 3) == 1.875f && Math.Round(knight_white.transform.position.z, 3) == 1.875f)))
         {
-            //TODO
+            king_black.SetActive(false);
+            knight_black.SetActive(false);
+            knight_white.SetActive(false);
+            tower_black.SetActive(false);
+            king_white.SetActive(false);
+            tower_white.SetActive(false);
+            levelUp.Play(0);
+            showLevels_xeque();
         }
-
     }
 
     public void clicked_xeque(GameObject object_clicked)
@@ -212,7 +225,6 @@ public class XequeScript : MonoBehaviour
             count_squares = 0;
             verifyPossibilities_tower(tower_white, tower_white.transform.position.x, 1);
             verifyPossibilities_tower(tower_white, tower_white.transform.position.z, 2);
-            count_squares = 0;
         }
         else if(level==2 && object_clicked == queen_white)
         {
@@ -220,30 +232,27 @@ public class XequeScript : MonoBehaviour
             verifyPossibilities_bishop(queen_white);
             verifyPossibilities_tower(queen_white, queen_white.transform.position.x, 1);
             verifyPossibilities_tower(queen_white, queen_white.transform.position.z, 2);
-            count_squares = 0;
         }
         else if(level==3 && object_clicked == bishop_white)
         {
             count_squares = 0;
             verifyPossibilities_bishop(bishop_white);
-            count_squares = 0;
         }
         else if(level==4 && object_clicked == pawn1_white)
         {
             count_squares = 0;
             verifyPossibilities_pawn(pawn1_white);
-            count_squares = 0;
         }
-        else if (level == 5)
+        else if (level == 5 && object_clicked == knight_white)
         {
-            //TODO
+            count_squares = 0;
+            showDirections_knight(knight_white);
         }
         else if(level == 6 && object_clicked == tower_white)
         {
             count_squares = 0;
             verifyPossibilities_tower(tower_white, tower_white.transform.position.x, 1);
             verifyPossibilities_tower(tower_white, tower_white.transform.position.z, 2);
-            count_squares = 0;
         }
         else if(level==6 && object_clicked == queen_white)
         {
@@ -251,17 +260,53 @@ public class XequeScript : MonoBehaviour
             verifyPossibilities_bishop(queen_white);
             verifyPossibilities_tower(queen_white, queen_white.transform.position.x, 1);
             verifyPossibilities_tower(queen_white, queen_white.transform.position.z, 2);
-            count_squares = 0;
         }
         else if(level == 7)
         {
-            //TODO
+            count_squares = 0;
+            showDirections_knight(knight_white);
         }
+    }
+
+    private void showDirections_knight(GameObject knight)
+    {
+        List<Vector3> possibilities = new List<Vector3>();
+        possibilities.Add(new Vector3(1.25f, 0.0101f, 2.5f));
+        possibilities.Add(new Vector3(2.5f, 0.0101f, 1.25f));
+        possibilities.Add(new Vector3(2.5f, 0.0101f, -1.25f));
+        possibilities.Add(new Vector3(1.25f, 0.0101f, -2.5f));
+        possibilities.Add(new Vector3(-1.25f, 0.0101f, -2.5f));
+        possibilities.Add(new Vector3(-2.5f, 0.0101f, -1.25f));
+        possibilities.Add(new Vector3(-2.5f, 0.0101f, 1.25f));
+        possibilities.Add(new Vector3(-1.25f, 0.0101f, 2.5f));
+
+        Vector3 aux;
+        for (int i = 0; i < 8; i++)
+        {
+            aux = knight.transform.position + possibilities[i];
+            if (insideBoundaries(aux))
+            {
+                count_squares++;
+                squares["square" + count_squares].SetActive(true);
+                squares["square" + count_squares].transform.position = aux;
+            }
+        }
+    }
+
+    private bool insideBoundaries(Vector3 aux)
+    {
+        if(aux.x > -4.4f && aux.x < 4.4f && aux.z > -4.4f && aux.z < 4.4f)
+        {
+            return true;
+        }
+
+        return false;
     }
 
     private void verifyPossibilities_pawn(GameObject pawnNum)
     {
         showDirections_pawn(pawnNum.transform.position.x, pawnNum.transform.position.z + 1.25f);
+        showDirections_pawn(pawnNum.transform.position.x, pawnNum.transform.position.z + 2.5f);
     }
 
     private void verifyPossibilities_bishop(GameObject bishopNum)

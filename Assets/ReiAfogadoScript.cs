@@ -10,7 +10,6 @@ public class ReiAfogadoScript : MonoBehaviour
     public GameObject back2pieces;
     public GameObject back2scenes;
     public GameObject buttonPieces;
-    public AudioSource rightAnswer;
     public AudioSource levelUp;
     public void defineLevel_reiafogado(int num)
     {

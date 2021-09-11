@@ -251,206 +251,42 @@ public class KnightScript2 : MonoBehaviour
 
     public void clicked_knight()
     {
-        verifyPossibilities_knight();
+        showDirections_knight();
     }
 
-    private void verifyPossibilities_knight()
+    private void showDirections_knight()
     {
-        if (knight.transform.position.z >= -1.875 && knight.transform.position.z <= 1.875 && knight.transform.position.x <= 1.875 && knight.transform.position.x >= -1.875)
+        List<Vector3> possibilities = new List<Vector3>();
+        possibilities.Add(new Vector3(1.25f, 0.0101f, 2.5f));
+        possibilities.Add(new Vector3(2.5f, 0.0101f, 1.25f));
+        possibilities.Add(new Vector3(2.5f, 0.0101f, -1.25f));
+        possibilities.Add(new Vector3(1.25f, 0.0101f, -2.5f));
+        possibilities.Add(new Vector3(-1.25f, 0.0101f, -2.5f));
+        possibilities.Add(new Vector3(-2.5f, 0.0101f, -1.25f));
+        possibilities.Add(new Vector3(-2.5f, 0.0101f, 1.25f));
+        possibilities.Add(new Vector3(-1.25f, 0.0101f, 2.5f));
+
+        Vector3 aux;
+        for (int i = 0; i < 8; i++)
         {
-            // every directions possible
-            showDirections_knight(true, true, true, true, true, true, true, true);
-        }
-        else if (knight.transform.position.z >= 4.375)
-        {
-            // 1, 8, 2 and 7 not possible
-            if (knight.transform.position.x <= -4.375)
+            aux = knight.transform.position + possibilities[i];
+            if (insideBoundaries(aux))
             {
-                // 6 and 5 not possible
-                showDirections_knight(false, false, true, true, false, false, false, false);
-            }
-            else if (knight.transform.position.x <= -3.125)
-            {
-                // 6 not possible
-                showDirections_knight(false, false, true, true, true, false, false, false);
-            }
-            else if (knight.transform.position.x >= 4.375)
-            {
-                // 3 and 4 not possible
-                showDirections_knight(false, false, false, false, true, true, false, false);
-            }
-            else if (knight.transform.position.x >= 3.125)
-            {
-                // 3 not possible
-                showDirections_knight(false, false, false, true, true, true, false, false);
-            }
-            else
-            {
-                showDirections_knight(false, false, true, true, true, true, false, false);
-            }
-        }
-        else if (knight.transform.position.z >= 3.125)
-        {
-            // 1 and 8 not possible
-            if (knight.transform.position.x <= -4.375)
-            {
-                // 7, 6, and 5 not possible
-                showDirections_knight(false, true, true, true, false, false, false, false);
-            }
-            else if (knight.transform.position.x <= -3.125)
-            {
-                // 3 and 2 not possible
-                showDirections_knight(false, false, false, true, true, true, true, false);
-            }
-            else if (knight.transform.position.x >= 4.375)
-            {
-                // 2, 3, and 4 not possible
-                showDirections_knight(false, false, false, false, true, true, true, false);
-            }
-            else if (knight.transform.position.x >= 3.125)
-            {
-                // 2 and 3 not possible
-                showDirections_knight(false, false, false, true, true, true, true, false);
-            }
-            else
-            {
-                showDirections_knight(false, true, true, true, true, true, true, false);
-            }
-        }
-        else if (knight.transform.position.z <= -4.375)
-        {
-            // 3, 4, 5 and 6 not possible
-            if (knight.transform.position.x <= -4.375)
-            {
-                // 7 and 8 not possible
-                showDirections_knight(true, true, false, false, false, false, false, false);
-            }
-            else if (knight.transform.position.x <= -3.125)
-            {
-                // 7 not possible
-                showDirections_knight(true, true, false, false, false, false, false, true);
-            }
-            else if (knight.transform.position.x >= 4.375)
-            {
-                // 1 and 2 not possible
-                showDirections_knight(false, false, false, false, false, false, true, true);
-            }
-            else if (knight.transform.position.x >= 3.125)
-            {
-                // 2 not possible
-                showDirections_knight(true, false, false, false, false, false, true, true);
-            }
-            else
-            {
-                showDirections_knight(true, true, false, false, false, false, true, true);
-            }
-        }
-        else if (knight.transform.position.z <= -3.125)
-        {
-            // 4 and 5 not possible
-            if (knight.transform.position.x <= -4.375)
-            {
-                // 6, 7 and 8 not possible
-                showDirections_knight(true, true, true, false, false, false, false, false);
-            }
-            else if (knight.transform.position.x <= -3.125)
-            {
-                // 6 and 7 not possible
-                showDirections_knight(true, true, true, false, false, false, false, true);
-            }
-            else if (knight.transform.position.x >= 4.375)
-            {
-                // 1, 2 and 3 not possible
-                showDirections_knight(false, false, false, false, false, true, true, true);
-            }
-            else if (knight.transform.position.x >= 3.125)
-            {
-                // 2 and 3 not possible
-                showDirections_knight(true, false, false, false, false, true, true, true);
-            }
-            else
-            {
-                showDirections_knight(true, true, true, false, false, true, true, true);
-            }
-        }
-        else
-        {
-            if (knight.transform.position.x <= -4.375)
-            {
-                // 5, 6, 7 and 8 not possible
-                showDirections_knight(true, true, true, true, false, false, false, false);
-            }
-            else if (knight.transform.position.x <= -3.125)
-            {
-                // 6 and 7 not possible
-                showDirections_knight(true, true, true, true, true, false, false, true);
-            }
-            else if (knight.transform.position.x >= 4.375)
-            {
-                // 1, 2, 3 and 4 not possible
-                showDirections_knight(false, false, false, false, true, true, true, true);
-            }
-            else if (knight.transform.position.x >= 3.125)
-            {
-                // 2 and 3 not possible
-                showDirections_knight(true, false, false, true, true, true, true, true);
-            }
-            else
-            {
-                showDirections_knight(true, true, true, true, false, false, false, false);
+                count_squares++;
+                squares["square" + count_squares].SetActive(true);
+                squares["square" + count_squares].transform.position = aux;
             }
         }
     }
 
-    private void showDirections_knight(bool opt1, bool opt2, bool opt3, bool opt4, bool opt5, bool opt6, bool opt7, bool opt8)
+    private bool insideBoundaries(Vector3 aux)
     {
-        if (opt1)
+        if (aux.x > -4.4f && aux.x < 4.4f && aux.z > -4.4f && aux.z < 4.4f)
         {
-            squares["square1"].SetActive(true);
-            squares["square1"].transform.position = knight.transform.position + new Vector3(1.25f, 0.0101f, 2.5f);
+            return true;
         }
 
-        if (opt2)
-        {
-            squares["square2"].SetActive(true);
-            squares["square2"].transform.position = knight.transform.position + new Vector3(2.5f, 0.0101f, 1.25f);
-        }
-
-        if (opt3)
-        {
-            squares["square3"].SetActive(true);
-            squares["square3"].transform.position = knight.transform.position + new Vector3(2.5f, 0.0101f, -1.25f);
-        }
-
-        if (opt4)
-        {
-            squares["square4"].SetActive(true);
-            squares["square4"].transform.position = knight.transform.position + new Vector3(1.25f, 0.0101f, -2.5f);
-        }
-
-        if (opt5)
-        {
-            squares["square5"].SetActive(true);
-            squares["square5"].transform.position = knight.transform.position + new Vector3(-1.25f, 0.0101f, -2.5f);
-        }
-
-        if (opt6)
-        {
-            squares["square6"].SetActive(true);
-            squares["square6"].transform.position = knight.transform.position + new Vector3(-2.5f, 0.0101f, -1.25f);
-        }
-
-        if (opt7)
-        {
-            squares["square7"].SetActive(true);
-            squares["square7"].transform.position = knight.transform.position + new Vector3(-2.5f, 0.0101f, 1.25f);
-        }
-
-        if (opt8)
-        {
-            squares["square8"].SetActive(true);
-            squares["square8"].transform.position = knight.transform.position + new Vector3(-1.25f, 0.0101f, 2.5f);
-        }
+        return false;
     }
 
     public void Move_knight(GameObject knightDirection)
