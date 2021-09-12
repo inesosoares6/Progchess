@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -128,7 +127,6 @@ public class TowerScript2 : MonoBehaviour
             case 10: // LEVEL III - x5
                 targets["target1"].transform.position = new Vector3(1.875f, 0.1f, 4.375f);
                 break;
-            // --------------- 2 towers // 2 targets ---------------------------
             case 11: // LEVEL IV - x1
                 tower2.SetActive(true);
                 tower.SetActive(true);
@@ -173,7 +171,6 @@ public class TowerScript2 : MonoBehaviour
         count_squares = 0;
         verifyPossibilities_tower(towerNum, towerNum.transform.position.x, 1);
         verifyPossibilities_tower(towerNum, towerNum.transform.position.z, 2);
-        count_squares = 0;
     }
 
     private void verifyPossibilities_tower(GameObject towerNum, float positionAxis, int axis)
@@ -311,14 +308,10 @@ public class TowerScript2 : MonoBehaviour
 
     public void endGame_tower()
     {
-        DeleteSquares_tower();
         buttonLevels.SetActive(false);
         tower.SetActive(false);
-        tower2.SetActive(false);
         buttonPieces.SetActive(true);
         back2scenes.SetActive(true);
         back2pieces.SetActive(false);
-        targets["target1"].SetActive(false);
-        targets["target2"].SetActive(false);
     }
 }

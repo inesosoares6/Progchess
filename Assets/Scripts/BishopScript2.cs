@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -195,7 +194,6 @@ public class BishopScript2 : MonoBehaviour
         objectBishop = bishopNum;
         count_squares = 0;
         verifyPossibilities_bishop(bishopNum);
-        count_squares = 0;
     }
 
     private void verifyPossibilities_bishop(GameObject bishopNum)
@@ -352,14 +350,10 @@ public class BishopScript2 : MonoBehaviour
 
     public void endGame_bishop()
     {
-        DeleteSquares_bishop();
         buttonLevels.SetActive(false);
         bishop.SetActive(false);
-        bishop2.SetActive(false);
         buttonPieces.SetActive(true);
         back2scenes.SetActive(true);
         back2pieces.SetActive(false);
-        targets["target1"].SetActive(false);
-        targets["target2"].SetActive(false);
     }
 }

@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEngine.EventSystems;
@@ -13,18 +12,21 @@ public class ReiAfogadoScript : MonoBehaviour
     public GameObject buttonPieces;
     public AudioSource levelUp;
     public GameObject king_white;
-    public GameObject queen_black;
-    public GameObject bishop_black;
+    public GameObject king_black;
     public GameObject knight_black;
-    public GameObject bishop_white;
-    public GameObject knight_white;
-    public GameObject tower_black1;
-    public GameObject tower_black2;
+    public GameObject knight_white1;
+    public GameObject knight_white2;
+    public GameObject bishop_white1;
+    public GameObject bishop_white2;
+    public GameObject tower_black;
     public GameObject tower_white;
     public GameObject pawn_white1;
     public GameObject pawn_white2;
-    public GameObject pawn_white3;
-    public GameObject pawn_black;
+    public GameObject pawn_black1;
+    public GameObject pawn_black2;
+    public GameObject pawn_black3;
+    public GameObject pawn_black4;
+    public GameObject pawn_black5;
     private int count_squares = 0;
     Dictionary<string, GameObject> squares = new Dictionary<string, GameObject>();
     private bool squares_introduced = false;
@@ -48,70 +50,159 @@ public class ReiAfogadoScript : MonoBehaviour
         switch (levelNum)
         {
             case 1: // LEVEL I
-                // TODO
+                king_black.SetActive(true);
+                bishop_white1.SetActive(true);
+                tower_white.SetActive(true);
+                king_black.transform.position = new Vector3(-4.375f, 0.0f, 4.375f);
+                bishop_white1.transform.position = new Vector3(3.125f, 0.0f, 0.625f);
+                tower_white.transform.position = new Vector3(-3.125f, 0.0f, -1.875f);
                 break;
             case 2: // LEVEL II
-                // TODO
+                king_black.SetActive(true);
+                king_white.SetActive(true);
+                knight_white1.SetActive(true);
+                knight_white2.SetActive(true);
+                pawn_black1.SetActive(true);
+                king_black.transform.position = new Vector3(-4.375f, 0.0f, 1.875f);
+                king_white.transform.position = new Vector3(-3.125f, 0.0f, -4.375f);
+                knight_white1.transform.position = new Vector3(-0.625f, 0.0f, -1.875f);
+                knight_white2.transform.position = new Vector3(0.625f, 0.0f, 1.875f);
+                pawn_black1.transform.position = new Vector3(4.375f, 0.0f, 3.125f);
                 break;
             case 3: // LEVEL III
-                // TODO
+                king_black.SetActive(true);
+                king_white.SetActive(true);
+                knight_white1.SetActive(true);
+                tower_white.SetActive(true);
+                bishop_white1.SetActive(true);
+                pawn_white1.SetActive(true);
+                pawn_white2.SetActive(true);
+                pawn_black1.SetActive(true);
+                pawn_black2.SetActive(true);
+                pawn_black3.SetActive(true);
+                pawn_black4.SetActive(true);
+                king_black.transform.position = new Vector3(0.625f, 0.0f, 4.375f);
+                king_white.transform.position = new Vector3(-3.125f, 0.0f, -1.875f);
+                knight_white1.transform.position = new Vector3(1.875f, 0.0f, -0.625f);
+                tower_white.transform.position = new Vector3(-0.625f, 0.0f, -4.375f);
+                bishop_white1.transform.position = new Vector3(-1.875f, 0.0f, -0.625f);
+                pawn_white1.transform.position = new Vector3(-4.375f, 0.0f, -0.625f);
+                pawn_white2.transform.position = new Vector3(1.875f, 0.0f, 0.625f);
+                pawn_black1.transform.position = new Vector3(-4.375f, 0.0f, 0.625f);
+                pawn_black2.transform.position = new Vector3(-3.125f, 0.0f, -0.625f);
+                pawn_black3.transform.position = new Vector3(1.875f, 0.0f, 1.875f);
+                pawn_black4.transform.position = new Vector3(3.125f, 0.0f, 3.125f);
                 break;
             case 4: // LEVEL IV
-                // TODO
+                king_black.SetActive(true);
+                king_white.SetActive(true);
+                tower_white.SetActive(true);
+                bishop_white1.SetActive(true);
+                knight_black.SetActive(true);
+                pawn_black1.SetActive(true);
+                pawn_black2.SetActive(true);
+                king_black.transform.position = new Vector3(4.375f, 0.0f, 3.125f);
+                king_white.transform.position = new Vector3(4.375f, 0.0f, 0.625f);
+                tower_white.transform.position = new Vector3(-3.125f, 0.0f, -4.375f);
+                bishop_white1.transform.position = new Vector3(-0.625f, 0.0f, -1.875f);
+                knight_black.transform.position = new Vector3(3.125f, 0.0f, 1.875f);
+                pawn_black1.transform.position = new Vector3(3.125f, 0.0f, 3.125f);
+                pawn_black2.transform.position = new Vector3(4.375f, 0.0f, 1.875f);
                 break;
             case 5: // LEVEL V
-                // TODO
-                break;
-            case 6: // LEVEL VI
-                // TODO
-                break;
-            case 7: // LEVEL VII
-                // TODO
+                king_black.SetActive(true);
+                king_white.SetActive(true);
+                tower_white.SetActive(true);
+                tower_black.SetActive(true);
+                bishop_white1.SetActive(true);
+                bishop_white2.SetActive(true);
+                pawn_black1.SetActive(true);
+                pawn_black2.SetActive(true);
+                pawn_black3.SetActive(true);
+                pawn_black4.SetActive(true);
+                pawn_black5.SetActive(true);
+                pawn_white1.SetActive(true);
+                pawn_white2.SetActive(true);
+                king_black.transform.position = new Vector3(-3.125f, 0.0f, 3.125f);
+                king_white.transform.position = new Vector3(-4.375f, 0.0f, 0.625f);
+                tower_white.transform.position = new Vector3(4.375f, 0.0f, 4.375f);
+                tower_black.transform.position = new Vector3(-3.125f, 0.0f, -3.125f);
+                bishop_white1.transform.position = new Vector3(-0.625f, 0.0f, -0.625f);
+                bishop_white2.transform.position = new Vector3(0.625f, 0.0f, -0.625f);
+                pawn_black1.transform.position = new Vector3(-4.375f, 0.0f, 3.125f);
+                pawn_black2.transform.position = new Vector3(-4.375f, 0.0f, 1.875f);
+                pawn_black3.transform.position = new Vector3(-1.875f, 0.0f, 1.875f);
+                pawn_black4.transform.position = new Vector3(4.375f, 0.0f, -0.625f);
+                pawn_black5.transform.position = new Vector3(4.375f, 0.0f, -1.875f);
+                pawn_white1.transform.position = new Vector3(-0.625f, 0.0f, 1.875f);
+                pawn_white2.transform.position = new Vector3(4.375f, 0.0f, -3.125f);
                 break;
         }
     }
 
     private void checkTarget_ReiAfogado()
     {
-        if (level == 1) // TODO
+        if (level == 1 && Math.Round(bishop_white1.transform.position.x, 3) == 0.625f && Math.Round(bishop_white1.transform.position.z, 3) == -1.875f)
         {
-            // TODO
+            king_black.SetActive(false);
+            bishop_white1.SetActive(false);
+            tower_white.SetActive(false);
             levelUp.Play(0);
             showLevels_ReiAfogado();
         }
-        else if (level == 2) // TODO
+        else if (level == 2 && Math.Round(knight_white1.transform.position.x, 3) == 1.875f && Math.Round(knight_white1.transform.position.z, 3) == -0.625f)
         {
-            // TODO
+            king_black.SetActive(false);
+            king_white.SetActive(false);
+            knight_white1.SetActive(false);
+            knight_white2.SetActive(false);
+            pawn_black1.SetActive(false);
             levelUp.Play(0);
             showLevels_ReiAfogado();
         }
-        else if (level == 3) // TODO
+        else if (level == 3 && Math.Round(knight_white1.transform.position.x, 3) == 3.125f && Math.Round(knight_white1.transform.position.z, 3) == 1.875f)
         {
-            // TODO
+            king_black.SetActive(false);
+            king_white.SetActive(false);
+            knight_white1.SetActive(false);
+            tower_white.SetActive(false);
+            bishop_white1.SetActive(false);
+            pawn_white1.SetActive(false);
+            pawn_white2.SetActive(false);
+            pawn_black1.SetActive(false);
+            pawn_black2.SetActive(false);
+            pawn_black3.SetActive(false);
+            pawn_black4.SetActive(false);
             levelUp.Play(0);
             showLevels_ReiAfogado();
         }
-        else if (level == 4) // TODO
+        else if (level == 4 && Math.Round(tower_white.transform.position.x, 3) == -3.125f && Math.Round(tower_white.transform.position.z, 3) == 4.375f)
         {
-            // TODO
+            king_black.SetActive(false);
+            king_white.SetActive(false);
+            tower_white.SetActive(false);
+            bishop_white1.SetActive(false);
+            knight_black.SetActive(false);
+            pawn_black1.SetActive(false);
+            pawn_black2.SetActive(false);
             levelUp.Play(0);
             showLevels_ReiAfogado();
         }
-        else if (level == 5) // TODO
+        else if (level == 5 && Math.Round(bishop_white1.transform.position.x, 3) == -3.125f && Math.Round(bishop_white1.transform.position.z, 3) == -3.125f)
         {
-            // TODO
-            levelUp.Play(0);
-            showLevels_ReiAfogado();
-        }
-        else if (level == 6) // TODO
-        {
-            // TODO
-            levelUp.Play(0);
-            showLevels_ReiAfogado();
-        }
-        else if (level == 7) // TODO
-        {
-            // TODO
+            king_black.SetActive(false);
+            king_white.SetActive(false);
+            tower_white.SetActive(false);
+            tower_black.SetActive(false);
+            bishop_white1.SetActive(false);
+            bishop_white2.SetActive(false);
+            pawn_black1.SetActive(false);
+            pawn_black2.SetActive(false);
+            pawn_black3.SetActive(false);
+            pawn_black4.SetActive(false);
+            pawn_black5.SetActive(false);
+            pawn_white1.SetActive(false);
+            pawn_white2.SetActive(false);
             levelUp.Play(0);
             showLevels_ReiAfogado();
         }
@@ -120,45 +211,31 @@ public class ReiAfogadoScript : MonoBehaviour
     public void clicked_ReiAfogado(GameObject object_clicked)
     {
         objectReiAfogado = object_clicked;
-        if (level == 1) // TODO
+        if (level == 1 && object_clicked == bishop_white1)
         {
             count_squares = 0;
-            // TODO
+            verifyPossibilities_bishop(bishop_white1);
         }
-        else if (level == 2) // TODO
+        else if (level == 2 && object_clicked == knight_white1)
         {
             count_squares = 0;
-            // TODO
+            showDirections_knight(knight_white1);
         }
-        else if (level == 3) // TODO
+        else if (level == 3 && object_clicked == knight_white1)
         {
             count_squares = 0;
-            // TODO
+            showDirections_knight(knight_white1);
         }
-        else if (level == 4) // TODO
+        else if (level == 4 && object_clicked == tower_white)
         {
             count_squares = 0;
-            // TODO
+            verifyPossibilities_tower(tower_white, tower_white.transform.position.x, 1);
+            verifyPossibilities_tower(tower_white, tower_white.transform.position.z, 2);
         }
-        else if (level == 5) // TODO
+        else if (level == 5 && object_clicked == bishop_white1)
         {
             count_squares = 0;
-            // TODO
-        }
-        else if (level == 6) // TODO
-        {
-            count_squares = 0;
-            // TODO
-        }
-        else if (level == 6) // TODO
-        {
-            count_squares = 0;
-            // TODO
-        }
-        else if (level == 7) // TODO
-        {
-            count_squares = 0;
-            // TODO
+            verifyPossibilities_bishop(bishop_white1);
         }
     }
 
@@ -195,12 +272,6 @@ public class ReiAfogadoScript : MonoBehaviour
         }
 
         return false;
-    }
-
-    private void verifyPossibilities_pawn(GameObject pawnNum)
-    {
-        showDirections_pawn(pawnNum.transform.position.x, pawnNum.transform.position.z + 1.25f);
-        showDirections_pawn(pawnNum.transform.position.x, pawnNum.transform.position.z + 2.5f);
     }
 
     private void verifyPossibilities_bishop(GameObject bishopNum)
@@ -253,13 +324,6 @@ public class ReiAfogadoScript : MonoBehaviour
             }
             i = i + 1.25f;
         }
-    }
-
-    private void showDirections_pawn(float axisX, float axisZ)
-    {
-        count_squares++;
-        squares["square" + count_squares].SetActive(true);
-        squares["square" + count_squares].transform.position = new Vector3(axisX, 0.0101f, axisZ);
     }
 
     private void showDirections_bishop(float axisX, float axisZ)
@@ -361,6 +425,14 @@ public class ReiAfogadoScript : MonoBehaviour
     public void beginReiAfogado()
     {
         buttonLevels.SetActive(false);
+        back2pieces.SetActive(false);
+    }
+
+    public void endGame_reiAfogado()
+    {
+        buttonLevels.SetActive(false);
+        buttonPieces.SetActive(true);
+        back2scenes.SetActive(true);
         back2pieces.SetActive(false);
     }
 }

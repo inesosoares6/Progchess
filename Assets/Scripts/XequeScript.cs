@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -467,6 +466,14 @@ public class XequeScript : MonoBehaviour
     public void beginXeque()
     {
         buttonLevels.SetActive(false);
+        back2pieces.SetActive(false);
+    }
+
+    public void endGame_xeque()
+    {
+        buttonLevels.SetActive(false);
+        buttonPieces.SetActive(true);
+        back2scenes.SetActive(true);
         back2pieces.SetActive(false);
     }
 }

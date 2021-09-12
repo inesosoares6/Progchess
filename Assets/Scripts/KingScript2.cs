@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -155,55 +154,7 @@ public class KingScript2 : MonoBehaviour
     {
         objectKing = kingNum;
         count_squares = 0;
-        verifyPossibilities_king(kingNum);
-        count_squares = 0;
-    }
-
-    private void verifyPossibilities_king(GameObject kingNum)
-    {
-        if (kingNum.transform.position.x < 4.375 && kingNum.transform.position.x > -4.375 && kingNum.transform.position.z < 4.375 && kingNum.transform.position.z > -4.375)
-        {
-            showDirections_king(kingNum.transform.position.x, kingNum.transform.position.z + 1.25f);
-            showDirections_king(kingNum.transform.position.x, kingNum.transform.position.z - 1.25f);
-            showDirections_king(kingNum.transform.position.x + 1.25f, kingNum.transform.position.z);
-            showDirections_king(kingNum.transform.position.x - 1.25f, kingNum.transform.position.z);
-            showDirections_king(kingNum.transform.position.x + 1.25f, kingNum.transform.position.z + 1.25f);
-            showDirections_king(kingNum.transform.position.x - 1.25f, kingNum.transform.position.z - 1.25f);
-            showDirections_king(kingNum.transform.position.x + 1.25f, kingNum.transform.position.z - 1.25f);
-            showDirections_king(kingNum.transform.position.x - 1.25f, kingNum.transform.position.z + 1.25f);
-        }
-        else if (kingNum.transform.position.x == 4.375 && kingNum.transform.position.x > -4.4 && kingNum.transform.position.z < 4.4 && kingNum.transform.position.z > -4.4)
-        {
-            showDirections_king(kingNum.transform.position.x, kingNum.transform.position.z + 1.25f);
-            showDirections_king(kingNum.transform.position.x, kingNum.transform.position.z - 1.25f);
-            showDirections_king(kingNum.transform.position.x - 1.25f, kingNum.transform.position.z);
-            showDirections_king(kingNum.transform.position.x - 1.25f, kingNum.transform.position.z - 1.25f);
-            showDirections_king(kingNum.transform.position.x - 1.25f, kingNum.transform.position.z + 1.25f);
-        }
-        else if (kingNum.transform.position.x < 4.375 && kingNum.transform.position.x == -4.375 && kingNum.transform.position.z < 4.4 && kingNum.transform.position.z > -4.4)
-        {
-            showDirections_king(kingNum.transform.position.x, kingNum.transform.position.z + 1.25f);
-            showDirections_king(kingNum.transform.position.x, kingNum.transform.position.z - 1.25f);
-            showDirections_king(kingNum.transform.position.x + 1.25f, kingNum.transform.position.z);
-            showDirections_king(kingNum.transform.position.x + 1.25f, kingNum.transform.position.z - 1.25f);
-            showDirections_king(kingNum.transform.position.x + 1.25f, kingNum.transform.position.z + 1.25f);
-        }
-        else if (kingNum.transform.position.x < 4.375 && kingNum.transform.position.x > -4.375 && kingNum.transform.position.z == 4.375 && kingNum.transform.position.z > -4.375)
-        {
-            showDirections_king(kingNum.transform.position.x, kingNum.transform.position.z - 1.25f);
-            showDirections_king(kingNum.transform.position.x + 1.25f, kingNum.transform.position.z);
-            showDirections_king(kingNum.transform.position.x - 1.25f, kingNum.transform.position.z);
-            showDirections_king(kingNum.transform.position.x - 1.25f, kingNum.transform.position.z - 1.25f);
-            showDirections_king(kingNum.transform.position.x + 1.25f, kingNum.transform.position.z - 1.25f);
-        }
-        else if (kingNum.transform.position.x < 4.375 && kingNum.transform.position.x > -4.375 && kingNum.transform.position.z < 4.375 && kingNum.transform.position.z == -4.375)
-        {
-            showDirections_king(kingNum.transform.position.x, kingNum.transform.position.z + 1.25f);
-            showDirections_king(kingNum.transform.position.x + 1.25f, kingNum.transform.position.z);
-            showDirections_king(kingNum.transform.position.x - 1.25f, kingNum.transform.position.z);
-            showDirections_king(kingNum.transform.position.x + 1.25f, kingNum.transform.position.z + 1.25f);
-            showDirections_king(kingNum.transform.position.x - 1.25f, kingNum.transform.position.z + 1.25f);
-        }
+        showDirections_king(kingNum);
     }
 
     private void introduce8squares()
@@ -262,11 +213,39 @@ public class KingScript2 : MonoBehaviour
         return square_aux;
     }
 
-    private void showDirections_king(float axisX, float axisZ)
+    private void showDirections_king(GameObject king)
     {
-        count_squares++;
-        squares["square" + count_squares].SetActive(true);
-        squares["square" + count_squares].transform.position = new Vector3(axisX, 0.0101f, axisZ);
+        List<Vector3> possibilities = new List<Vector3>();
+        possibilities.Add(new Vector3(1.25f, 0.0101f, 1.25f));
+        possibilities.Add(new Vector3(1.25f, 0.0101f, 0.00f));
+        possibilities.Add(new Vector3(1.25f, 0.0101f, -1.25f));
+        possibilities.Add(new Vector3(0.00f, 0.0101f, -1.25f));
+        possibilities.Add(new Vector3(-1.25f, 0.0101f, -1.25f));
+        possibilities.Add(new Vector3(-1.25f, 0.0101f, -0.00f));
+        possibilities.Add(new Vector3(-1.25f, 0.0101f, 1.25f));
+        possibilities.Add(new Vector3(0.00f, 0.0101f, 1.25f));
+
+        Vector3 aux;
+        for (int i = 0; i < 8; i++)
+        {
+            aux = king.transform.position + possibilities[i];
+            if (insideBoundaries(aux))
+            {
+                count_squares++;
+                squares["square" + count_squares].SetActive(true);
+                squares["square" + count_squares].transform.position = aux;
+            }
+        }
+    }
+
+    private bool insideBoundaries(Vector3 aux)
+    {
+        if (aux.x > -4.4f && aux.x < 4.4f && aux.z > -4.4f && aux.z < 4.4f)
+        {
+            return true;
+        }
+
+        return false;
     }
 
     public void Move_king(GameObject kingDirection)
@@ -306,12 +285,10 @@ public class KingScript2 : MonoBehaviour
 
     public void endGame_king()
     {
-        DeleteSquares_king();
         buttonLevels.SetActive(false);
         king.SetActive(false);
         buttonPieces.SetActive(true);
         back2scenes.SetActive(true);
         back2pieces.SetActive(false);
-        target.SetActive(false);
     }
 }

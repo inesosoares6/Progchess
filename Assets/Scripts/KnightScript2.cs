@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -327,12 +325,10 @@ public class KnightScript2 : MonoBehaviour
 
     public void endGame_knight()
     {
-        DeleteSquares_knight();
         buttonLevels.SetActive(false);
         knight.SetActive(false);
         buttonPieces.SetActive(true);
         back2scenes.SetActive(true);
         back2pieces.SetActive(false);
-        target.SetActive(false);
     }
 }

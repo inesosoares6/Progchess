@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -176,7 +175,6 @@ public class QueenScript2 : MonoBehaviour
         verifyPossibilities_bishop(queenNum);
         verifyPossibilities_tower(queenNum, queenNum.transform.position.x, 1);
         verifyPossibilities_tower(queenNum, queenNum.transform.position.z, 2);
-        count_squares = 0;
     }
 
     private void createTarget()
@@ -345,12 +343,10 @@ public class QueenScript2 : MonoBehaviour
 
     public void endGame_queen()
     {
-        DeleteSquares_queen();
         buttonLevels.SetActive(false);
         queen.SetActive(false);
         buttonPieces.SetActive(true);
         back2scenes.SetActive(true);
         back2pieces.SetActive(false);
-        target.SetActive(false);
     }
 }

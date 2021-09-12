@@ -363,4 +363,12 @@ public class XequeMateScript : MonoBehaviour
         buttonLevels.SetActive(false);
         back2pieces.SetActive(false);
     }
+
+    public void endGame_xequeMate()
+    {
+        buttonLevels.SetActive(false);
+        buttonPieces.SetActive(true);
+        back2scenes.SetActive(true);
+        back2pieces.SetActive(false);
+    }
 }

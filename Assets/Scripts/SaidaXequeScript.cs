@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -318,51 +317,6 @@ public class SaidaXequeScript : MonoBehaviour
         return false;
     }
 
-    private void verifyPossibilities_pawn(GameObject pawnNum)
-    {
-        showDirections_pawn(pawnNum.transform.position.x, pawnNum.transform.position.z + 1.25f);
-        showDirections_pawn(pawnNum.transform.position.x, pawnNum.transform.position.z + 2.5f);
-    }
-
-    private void verifyPossibilities_bishop(GameObject bishopNum)
-    {
-        float i = bishopNum.transform.position.x;
-        float j = bishopNum.transform.position.z;
-        while (i < 4.375f && j < 4.375f)
-        {
-            i = i + 1.25f;
-            j = j + 1.25f;
-            showDirections_bishop(i, j);
-        }
-
-        i = bishopNum.transform.position.x;
-        j = bishopNum.transform.position.z;
-        while (i > -4.375f && j < 4.375f)
-        {
-            i = i - 1.25f;
-            j = j + 1.25f;
-            showDirections_bishop(i, j);
-        }
-
-        i = bishopNum.transform.position.x;
-        j = bishopNum.transform.position.z;
-        while (i < 4.375f && j > -4.375f)
-        {
-            i = i + 1.25f;
-            j = j - 1.25f;
-            showDirections_bishop(i, j);
-        }
-
-        i = bishopNum.transform.position.x;
-        j = bishopNum.transform.position.z;
-        while (i > -4.375f && j > -4.375f)
-        {
-            i = i - 1.25f;
-            j = j - 1.25f;
-            showDirections_bishop(i, j);
-        }
-    }
-
     private void verifyPossibilities_tower(GameObject towerNum, float positionAxis, int axis)
     {
         float i = -4.375f;
@@ -374,20 +328,6 @@ public class SaidaXequeScript : MonoBehaviour
             }
             i = i + 1.25f;
         }
-    }
-
-    private void showDirections_pawn(float axisX, float axisZ)
-    {
-        count_squares++;
-        squares["square" + count_squares].SetActive(true);
-        squares["square" + count_squares].transform.position = new Vector3(axisX, 0.0101f, axisZ);
-    }
-
-    private void showDirections_bishop(float axisX, float axisZ)
-    {
-        count_squares++;
-        squares["square" + count_squares].SetActive(true);
-        squares["square" + count_squares].transform.position = new Vector3(axisX, 0.0101f, axisZ);
     }
 
     private void showDirections_tower(GameObject towerNum, int axis, float pos)
@@ -482,6 +422,14 @@ public class SaidaXequeScript : MonoBehaviour
     public void beginSaidaXeque()
     {
         buttonLevels.SetActive(false);
+        back2pieces.SetActive(false);
+    }
+
+    public void endGame_saidaxeque()
+    {
+        buttonLevels.SetActive(false);
+        buttonPieces.SetActive(true);
+        back2scenes.SetActive(true);
         back2pieces.SetActive(false);
     }
 }

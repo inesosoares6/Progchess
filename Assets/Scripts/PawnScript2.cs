@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -178,7 +177,6 @@ public class PawnScript2 : MonoBehaviour
             case 12: // LEVEL III - x5
                 targets["target1"].transform.position = new Vector3(-1.875f, 0.1f, 4.375f);
                 break;
-            // --------------- 4 pawns // 5 targets ---------------------------
             case 13: // LEVEL IV - x1
                 firstMove = true;
                 pawn2.SetActive(true);
@@ -194,7 +192,6 @@ public class PawnScript2 : MonoBehaviour
                 targets["target3"].transform.position = new Vector3(-1.875f, 0.1f, -0.625f);
                 targets["target4"].transform.position = new Vector3(3.125f, 0.1f, -1.875f);
                 targets["target2"].transform.position = new Vector3(-0.625f, 0.1f, -1.875f);
-                //targets["target2"].transform.position = new Vector3(0.625f, 0.1f, -0.625f); // second position
                 break;
             case 14: // LEVEL V - x1
                 firstMove = true;
@@ -225,7 +222,6 @@ public class PawnScript2 : MonoBehaviour
         }
         count_squares = 0;
         verifyPossibilities_pawn(objectPawn, pawnNum);
-        count_squares = 0;
     }
 
     private void verifyPossibilities_pawn(GameObject pawnNum, int opt)
@@ -373,12 +369,10 @@ public class PawnScript2 : MonoBehaviour
 
     public void endGame_pawn()
     {
-        DeleteSquares_pawn();
         buttonLevels.SetActive(false);
         pawn.SetActive(false);
         buttonPieces.SetActive(true);
         back2scenes.SetActive(true);
         back2pieces.SetActive(false);
-        targets["target1"].SetActive(false);
     }
 }
