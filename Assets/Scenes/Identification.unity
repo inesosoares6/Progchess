@@ -749,7 +749,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "N\xEDvel 1"
+  m_Text: "N\xEDvel I"
 --- !u!222 &147139511
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -955,7 +955,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "N\xEDvel 3"
+  m_Text: "N\xEDvel III"
 --- !u!222 &158464123
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3243,7 +3243,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "N\xEDvel 2"
+  m_Text: "N\xEDvel II"
 --- !u!222 &842773894
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6975,7 +6975,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "N\xEDvel 4"
+  m_Text: "N\xEDvel IV"
 --- !u!222 &1371292840
 CanvasRenderer:
   m_ObjectHideFlags: 0
