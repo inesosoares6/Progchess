@@ -21,11 +21,11 @@ public class ManagerAtaquesRei : MonoBehaviour
 
     public void initiateXequeMate()
     {
-        xequeMateScript.showLevels_xequemate();
+        xequeMateScript.showLevels_xequeMate();
     }
 
     public void initiateReiAfogado()
     {
-        reiAfogadoScript.showLevels_reiafogado();
+        reiAfogadoScript.showLevels_ReiAfogado();
     }
 }

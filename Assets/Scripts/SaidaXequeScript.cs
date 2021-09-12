@@ -48,70 +48,170 @@ public class SaidaXequeScript : MonoBehaviour
         switch (levelNum)
         {
             case 1: // LEVEL I
-                // TODO
+                king_white.SetActive(true);
+                queen_black.SetActive(true);
+                king_white.transform.position = new Vector3(0.625f, 0.0f, -4.375f);
+                queen_black.transform.position = new Vector3(0.625f, 0.0f, 0.625f);
                 break;
             case 2: // LEVEL II
-                // TODO
+                king_white.SetActive(true);
+                queen_black.SetActive(true);
+                bishop_black.SetActive(true);
+                knight_black.SetActive(true);
+                king_white.transform.position = new Vector3(-1.875f, 0.0f, -0.625f);
+                queen_black.transform.position = new Vector3(-1.875f, 0.0f, -3.125f);
+                bishop_black.transform.position = new Vector3(1.875f, 0.0f, 1.875f);
+                knight_black.transform.position = new Vector3(-1.875f, 0.0f, 3.125f);
                 break;
             case 3: // LEVEL III
-                // TODO
+                king_white.SetActive(true);
+                tower_white.SetActive(true);
+                tower_black1.SetActive(true);
+                tower_black2.SetActive(true);
+                king_white.transform.position = new Vector3(4.375f, 0.0f, -1.875f);
+                tower_white.transform.position = new Vector3(-4.375f, 0.0f, -0.625f);
+                tower_black1.transform.position = new Vector3(3.125f, 0.0f, 1.875f);
+                tower_black2.transform.position = new Vector3(4.375f, 0.0f, 3.125f);
                 break;
             case 4: // LEVEL IV
-                // TODO
+                king_white.SetActive(true);
+                tower_white.SetActive(true);
+                bishop_black.SetActive(true);
+                bishop_white.SetActive(true);
+                knight_black.SetActive(true);
+                knight_white.SetActive(true);
+                king_white.transform.position = new Vector3(-4.375f, 0.0f, -3.125f);
+                tower_white.transform.position = new Vector3(-3.125f, 0.0f, -4.375f);
+                bishop_black.transform.position = new Vector3(-0.625f, 0.0f, 0.625f);
+                bishop_white.transform.position = new Vector3(-3.125f, 0.0f, -3.125f);
+                knight_black.transform.position = new Vector3(-1.875f, 0.0f, -3.125f);
+                knight_white.transform.position = new Vector3(0.625f, 0.0f, -1.875f);
                 break;
             case 5: // LEVEL V
-                // TODO
+                king_white.SetActive(true);
+                queen_black.SetActive(true);
+                bishop_black.SetActive(true);
+                knight_black.SetActive(true);
+                knight_white.SetActive(true);
+                tower_black1.SetActive(true);
+                pawn_white1.SetActive(true);
+                pawn_white2.SetActive(true);
+                pawn_white3.SetActive(true);
+                king_white.transform.position = new Vector3(0.625f, 0.0f, -4.375f);
+                queen_black.transform.position = new Vector3(0.625f, 0.0f, 4.375f);
+                bishop_black.transform.position = new Vector3(3.125f, 0.0f, -1.875f);
+                knight_black.transform.position = new Vector3(1.875f, 0.0f, -1.875f);
+                knight_white.transform.position = new Vector3(3.125f, 0.0f, -4.375f);
+                tower_black1.transform.position = new Vector3(4.375f, 0.0f, -4.375f);
+                pawn_white1.transform.position = new Vector3(-0.625f, 0.0f, -3.125f);
+                pawn_white2.transform.position = new Vector3(0.625f, 0.0f, -3.125f);
+                pawn_white3.transform.position = new Vector3(1.875f, 0.0f, -3.125f);
                 break;
             case 6: // LEVEL VI
-                // TODO
+                king_white.SetActive(true);
+                queen_black.SetActive(true);
+                knight_black.SetActive(true);
+                knight_white.SetActive(true);
+                tower_white.SetActive(true);
+                pawn_white1.SetActive(true);
+                pawn_black.SetActive(true);
+                king_white.transform.position = new Vector3(-0.625f, 0.0f, -1.875f);
+                queen_black.transform.position = new Vector3(-1.875f, 0.0f, 0.625f);
+                knight_black.transform.position = new Vector3(1.875f, 0.0f, -0.625f);
+                knight_white.transform.position = new Vector3(-3.125f, 0.0f, -1.875f);
+                tower_white.transform.position = new Vector3(-0.625f, 0.0f, -3.125f);
+                pawn_white1.transform.position = new Vector3(0.625f, 0.0f, -1.875f);
+                pawn_black.transform.position = new Vector3(4.375f, 0.0f, 1.875f);
                 break;
             case 7: // LEVEL VII
-                // TODO
+                king_white.SetActive(true);
+                queen_black.SetActive(true);
+                knight_white.SetActive(true);
+                pawn_white1.SetActive(true);
+                pawn_white2.SetActive(true);
+                bishop_black.SetActive(true);
+                king_white.transform.position = new Vector3(-1.875f, 0.0f, -1.875f);
+                queen_black.transform.position = new Vector3(-4.375f, 0.0f, -0.625f);
+                knight_white.transform.position = new Vector3(-0.625f, 0.0f, -1.875f);
+                pawn_white1.transform.position = new Vector3(-0.625f, 0.0f, -3.125f);
+                pawn_white2.transform.position = new Vector3(1.875f, 0.0f, -0.625f);
+                bishop_black.transform.position = new Vector3(3.125f, 0.0f, 3.125f);
                 break;
         }
     }
 
     private void checkTarget_Saidaxeque()
     {
-        if (level == 1 ) // TODO
+        if (level == 1 && ((Math.Round(king_white.transform.position.x, 3) == -0.625f && Math.Round(king_white.transform.position.z, 3) == -3.125f) || (Math.Round(king_white.transform.position.x, 3) == -0.625f && Math.Round(king_white.transform.position.z, 3) == -4.375f) || (Math.Round(king_white.transform.position.x, 3) == 1.875f && Math.Round(king_white.transform.position.z, 3) == -3.125f) || (Math.Round(king_white.transform.position.x, 3) == 1.875f && Math.Round(king_white.transform.position.z, 3) == -4.375f)))
         {
-            // TODO
+            king_white.SetActive(false);
+            queen_black.SetActive(false);
             levelUp.Play(0);
             showLevels_Saidaxeque();
         }
-        else if (level == 2) // TODO
+        else if (level == 2 && Math.Round(king_white.transform.position.x, 3) == -3.125f && Math.Round(king_white.transform.position.z, 3) == -0.625f)
         {
-            // TODO
+            king_white.SetActive(false);
+            queen_black.SetActive(false);
+            bishop_black.SetActive(false);
+            knight_black.SetActive(false);
             levelUp.Play(0);
             showLevels_Saidaxeque();
         }
-        else if (level == 3) // TODO
+        else if (level == 3 && Math.Round(tower_white.transform.position.x, 3) == 4.375f && Math.Round(tower_white.transform.position.z, 3) == -0.625f)
         {
-            // TODO
+            king_white.SetActive(false);
+            tower_white.SetActive(false);
+            tower_black1.SetActive(false);
+            tower_black2.SetActive(false);
             levelUp.Play(0);
             showLevels_Saidaxeque();
         }
-        else if (level == 4) // TODO
+        else if (level == 4 && Math.Round(knight_white.transform.position.x, 3) == -1.875f && Math.Round(knight_white.transform.position.z, 3) == -0.625f)
         {
-            // TODO
+            king_white.SetActive(false);
+            tower_white.SetActive(false);
+            bishop_black.SetActive(false);
+            bishop_white.SetActive(false);
+            knight_black.SetActive(false);
+            knight_white.SetActive(false);
             levelUp.Play(0);
             showLevels_Saidaxeque();
         }
-        else if (level == 5) // TODO
+        else if (level == 5 && Math.Round(knight_white.transform.position.x, 3) == 1.875f && Math.Round(knight_white.transform.position.z, 3) == -1.875f)
         {
-            // TODO
+            king_white.SetActive(false);
+            queen_black.SetActive(false);
+            bishop_black.SetActive(false);
+            knight_black.SetActive(false);
+            knight_white.SetActive(false);
+            tower_black1.SetActive(false);
+            pawn_white1.SetActive(false);
+            pawn_white2.SetActive(false);
+            pawn_white3.SetActive(false);
             levelUp.Play(0);
             showLevels_Saidaxeque();
         }
-        else if (level == 6) // TODO
+        else if (level == 6 && Math.Round(king_white.transform.position.x, 3) == 0.625f && Math.Round(king_white.transform.position.z, 3) == -0.625f)
         {
-            // TODO
+            king_white.SetActive(false);
+            queen_black.SetActive(false);
+            knight_black.SetActive(false);
+            knight_white.SetActive(false);
+            tower_white.SetActive(false);
+            pawn_white1.SetActive(false);
+            pawn_black.SetActive(false);
             levelUp.Play(0);
             showLevels_Saidaxeque();
         }
-        else if (level == 7) // TODO
+        else if (level == 7 && Math.Round(knight_white.transform.position.x, 3) == 0.625f && Math.Round(knight_white.transform.position.z, 3) == 0.625f)
         {
-            // TODO
+            king_white.SetActive(false);
+            queen_black.SetActive(false);
+            knight_white.SetActive(false);
+            pawn_white1.SetActive(false);
+            pawn_white2.SetActive(false);
+            bishop_black.SetActive(false);
             levelUp.Play(0);
             showLevels_Saidaxeque();
         }
@@ -120,45 +220,66 @@ public class SaidaXequeScript : MonoBehaviour
     public void clicked_Saidaxeque(GameObject object_clicked)
     {
         objectSaidaXeque = object_clicked;
-        if (level == 1) // TODO
+        if (level == 1 && object_clicked == king_white)
         {
             count_squares = 0;
-            // TODO
+            showDirections_king(king_white);
         }
-        else if (level == 2) // TODO
+        else if (level == 2 && object_clicked == king_white)
         {
             count_squares = 0;
-            // TODO
+            showDirections_king(king_white);
         }
-        else if (level == 3) // TODO
+        else if (level == 3 && object_clicked == tower_white)
         {
             count_squares = 0;
-            // TODO
+            verifyPossibilities_tower(tower_white, tower_white.transform.position.x, 1);
+            verifyPossibilities_tower(tower_white, tower_white.transform.position.z, 2);
         }
-        else if (level == 4) // TODO
+        else if (level == 4 && object_clicked == knight_white)
         {
             count_squares = 0;
-            // TODO
+            showDirections_knight(knight_white);
         }
-        else if (level == 5) // TODO
+        else if (level == 5 && object_clicked == knight_white)
         {
             count_squares = 0;
-            // TODO
+            showDirections_knight(knight_white);
         }
-        else if (level == 6) // TODO
+        else if (level == 6 && object_clicked == king_white)
         {
             count_squares = 0;
-            // TODO
+            showDirections_king(king_white);
         }
-        else if (level == 6) // TODO
+        else if (level == 7 && object_clicked == knight_white)
         {
             count_squares = 0;
-            // TODO
+            showDirections_knight(knight_white);
         }
-        else if (level == 7) // TODO
+    }
+
+    private void showDirections_king(GameObject king)
+    {
+        List<Vector3> possibilities = new List<Vector3>();
+        possibilities.Add(new Vector3(1.25f, 0.0101f, 1.25f));
+        possibilities.Add(new Vector3(1.25f, 0.0101f, 0.00f));
+        possibilities.Add(new Vector3(1.25f, 0.0101f, -1.25f));
+        possibilities.Add(new Vector3(0.00f, 0.0101f, -1.25f));
+        possibilities.Add(new Vector3(-1.25f, 0.0101f, -1.25f));
+        possibilities.Add(new Vector3(-1.25f, 0.0101f, -0.00f));
+        possibilities.Add(new Vector3(-1.25f, 0.0101f, 1.25f));
+        possibilities.Add(new Vector3(0.00f, 0.0101f, 1.25f));
+
+        Vector3 aux;
+        for (int i = 0; i < 8; i++)
         {
-            count_squares = 0;
-            // TODO
+            aux = king.transform.position + possibilities[i];
+            if (insideBoundaries(aux))
+            {
+                count_squares++;
+                squares["square" + count_squares].SetActive(true);
+                squares["square" + count_squares].transform.position = aux;
+            }
         }
     }
 
