@@ -378,6 +378,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12830}
     - Class: 114
+      Script: {instanceID: 12866}
+    - Class: 114
       Script: {instanceID: 13010}
     - Class: 114
       Script: {instanceID: 13152}
@@ -385,6 +387,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 13198}
     - Class: 114
       Script: {instanceID: 13312}
+    - Class: 114
+      Script: {instanceID: 13522}
     - Class: 114
       Script: {instanceID: 13570}
     - Class: 114
@@ -421,6 +425,10 @@ ScriptsOnlyBuild:
     - Class: 23
       Script: {instanceID: 0}
     - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
@@ -464,6 +472,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 13198}
     - Class: 114
       Script: {instanceID: 13402}
+    - Class: 114
+      Script: {instanceID: 13522}
     - Class: 114
       Script: {instanceID: 13530}
     - Class: 114
@@ -668,7 +678,7 @@ ScriptsOnlyBuild:
     className: PlayerQuitHandler
   - hash:
       serializedVersion: 2
-      Hash: 7c4f482eafc52871a9464e1b8ea46b34
+      Hash: bcc36418d19d1e8764e77b563350d066
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: XequeScript
@@ -740,7 +750,7 @@ ScriptsOnlyBuild:
     className: TMP_InputField
   - hash:
       serializedVersion: 2
-      Hash: 4ea6d2a933ec89881f875be817be1ba5
+      Hash: 477e76c9d77fb3dbd844707e81323e8c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: XequeMateScript
@@ -884,7 +894,7 @@ ScriptsOnlyBuild:
     className: Benchmark03
   - hash:
       serializedVersion: 2
-      Hash: 4ea6d2a933ec89881f875be817be1ba5
+      Hash: b29c8fa093caf1e0de8e48dc01120ab6
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SaidaXequeScript
@@ -986,7 +996,7 @@ ScriptsOnlyBuild:
     className: CameraController
   - hash:
       serializedVersion: 2
-      Hash: ea2e07faff71e168f678ea96ac590930
+      Hash: 54e6bef31dab3fb1205c00350d0333d7
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: TowerScript2
@@ -1010,13 +1020,13 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAnimator
   - hash:
       serializedVersion: 2
-      Hash: 4bc3323d9e63a0df31d50219e55e2a87
+      Hash: b320ac85b5925c26cf0da090b3d054f4
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ReiAfogadoScript
   - hash:
       serializedVersion: 2
-      Hash: 39e360c2b119d404091e93afba0fe388
+      Hash: 71fef00f280ea343cb91f59eed42111a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: KingScript2
@@ -1064,7 +1074,7 @@ ScriptsOnlyBuild:
     className: Level3Script
   - hash:
       serializedVersion: 2
-      Hash: fd1f4621933fc4df512e4ad6b084aa0f
+      Hash: 2bbc581bfbd1e26a9d4f3dee42a04236
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: KnightScript2
@@ -1106,7 +1116,7 @@ ScriptsOnlyBuild:
     className: ObjectSpin
   - hash:
       serializedVersion: 2
-      Hash: 0b5cd53c6ce4ec8cfb8146a48b217220
+      Hash: 543a934e6ea368dbcf55eddc541b5ca9
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BatalhaNavalScript
@@ -1274,7 +1284,7 @@ ScriptsOnlyBuild:
     className: EmulatorManager
   - hash:
       serializedVersion: 2
-      Hash: 275a39dfc8ab5fda9ed918d95fa53cbc
+      Hash: 9b4958cf14dffe4ca4efaa72ef5a9c85
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: QueenScript2
@@ -1406,7 +1416,7 @@ ScriptsOnlyBuild:
     className: MarkerTrack
   - hash:
       serializedVersion: 2
-      Hash: df4e76e45497541bb1831644678495a6
+      Hash: 378d5ba1f06db7592739b5a43231eb99
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BishopScript2
@@ -1430,7 +1440,7 @@ ScriptsOnlyBuild:
     className: GvrPointerGraphicRaycaster
   - hash:
       serializedVersion: 2
-      Hash: 979e9b8e2c8992abbf9163c1fb6d02ef
+      Hash: 73bd6928bfff94eab1e607dfd149790c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PawnScript2
@@ -1634,7 +1644,7 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: eea5061ea4071c68936e24b15efc3dce
+      Hash: cfce8c6fd7cb094a68b7b1c6d57032d7
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ManagerPieces

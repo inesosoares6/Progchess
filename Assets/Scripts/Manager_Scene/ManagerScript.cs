@@ -9,12 +9,6 @@ public class ManagerScript : MonoBehaviour
         SceneManager.LoadScene("Identification");
     }
 
-    public void sceneBatalhaNaval()
-    {
-        Debug.Log("Scene -> Batalha Naval");
-        SceneManager.LoadScene("BatalhaNaval");
-    }
-
     public void sceneMovementsPieces()
     {
         Debug.Log("Scene -> Movimentos das Peças");
