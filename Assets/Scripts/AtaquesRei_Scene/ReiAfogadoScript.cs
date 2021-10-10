@@ -31,6 +31,7 @@ public class ReiAfogadoScript : MonoBehaviour
     Dictionary<string, GameObject> squares = new Dictionary<string, GameObject>();
     private bool squares_introduced = false;
     private GameObject objectReiAfogado;
+    public GameObject board;
 
     private void Start()
     {
@@ -416,6 +417,7 @@ public class ReiAfogadoScript : MonoBehaviour
         buttonPieces.SetActive(false);
         back2scenes.SetActive(false);
         back2pieces.SetActive(true);
+        board.SetActive(true);
         if (squares_introduced)
         {
             DeleteSquares_ReiAfogado();
@@ -434,5 +436,6 @@ public class ReiAfogadoScript : MonoBehaviour
         buttonPieces.SetActive(true);
         back2scenes.SetActive(true);
         back2pieces.SetActive(false);
+        board.SetActive(false);
     }
 }

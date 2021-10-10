@@ -37,6 +37,7 @@ public class XequeMateScript : MonoBehaviour
     Dictionary<string, GameObject> squares = new Dictionary<string, GameObject>();
     private bool squares_introduced = false;
     private GameObject objectXequeMate;
+    public GameObject board;
 
     private void Start()
     {
@@ -516,6 +517,7 @@ public class XequeMateScript : MonoBehaviour
         buttonPieces.SetActive(false);
         back2scenes.SetActive(false);
         back2pieces.SetActive(true);
+        board.SetActive(true);
         if (squares_introduced)
         {
             DeleteSquares_xequeMate();
@@ -534,5 +536,6 @@ public class XequeMateScript : MonoBehaviour
         buttonPieces.SetActive(true);
         back2scenes.SetActive(true);
         back2pieces.SetActive(false);
+        board.SetActive(false);
     }
 }

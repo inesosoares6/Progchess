@@ -19,6 +19,7 @@ public class BishopScript2 : MonoBehaviour
     private bool squares_introduced = false;
     private int count_targets = 0;
     Dictionary<string, GameObject> targets = new Dictionary<string, GameObject>();
+    public GameObject board;
 
     private void Start()
     {
@@ -355,5 +356,6 @@ public class BishopScript2 : MonoBehaviour
         buttonPieces.SetActive(true);
         back2scenes.SetActive(true);
         back2pieces.SetActive(false);
+        board.SetActive(false);
     }
 }

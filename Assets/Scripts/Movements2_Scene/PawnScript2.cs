@@ -23,6 +23,7 @@ public class PawnScript2 : MonoBehaviour
     private int count_targets = 0;
     Dictionary<string, GameObject> targets = new Dictionary<string, GameObject>();
     private bool firstTime = true;
+    public GameObject board;
 
     private void Start()
     {
@@ -374,5 +375,6 @@ public class PawnScript2 : MonoBehaviour
         buttonPieces.SetActive(true);
         back2scenes.SetActive(true);
         back2pieces.SetActive(false);
+        board.SetActive(false);
     }
 }

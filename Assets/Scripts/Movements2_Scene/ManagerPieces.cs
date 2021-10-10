@@ -16,40 +16,47 @@ public class ManagerPieces : MonoBehaviour
     public QueenScript2 queenScript2;
     public GameObject pawn;
     public PawnScript2 pawnScript2;
+    public GameObject board;
 
     public void initiateKnight()
     {
         knight.SetActive(true);
+        board.SetActive(true);
         knightScript2.showLevels_knight();
     }
 
     public void initiateTower()
     {
         tower.SetActive(true);
+        board.SetActive(true);
         towerScript2.showLevels_tower();
     }
 
     public void initiatePawn()
     {
         pawn.SetActive(true);
+        board.SetActive(true);
         pawnScript2.showLevels_pawn();
     }
 
     public void initiateKing()
     {
         king.SetActive(true);
+        board.SetActive(true);
         kingScript2.showLevels_king();
     }
 
     public void initiateQueen()
     {
         queen.SetActive(true);
+        board.SetActive(true);
         queenScript2.showLevels_queen();
     }
 
     public void initiateBishop()
     {
         bishop.SetActive(true);
+        board.SetActive(true);
         bishopScript2.showLevels_bishop();
     }
 }

@@ -1,6 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BoardSetupManager : MonoBehaviour
 {
@@ -29,5 +28,10 @@ public class BoardSetupManager : MonoBehaviour
     public void initiateLevel4()
     {
         boardSetupLevel4.showPieces();
+    }
+
+    public void initiateBatalhaNaval()
+    {
+        SceneManager.LoadScene("BatalhaNaval");
     }
 }

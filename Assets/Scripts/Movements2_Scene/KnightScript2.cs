@@ -16,6 +16,7 @@ public class KnightScript2 : MonoBehaviour
     private int count_squares = 0;
     Dictionary<string, GameObject> squares = new Dictionary<string, GameObject>();
     private bool squares_introduced = false;
+    public GameObject board;
 
     private void Start()
     {
@@ -330,5 +331,6 @@ public class KnightScript2 : MonoBehaviour
         buttonPieces.SetActive(true);
         back2scenes.SetActive(true);
         back2pieces.SetActive(false);
+        board.SetActive(false);
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BatalhaNavalScript : MonoBehaviour
 {
@@ -78,6 +79,16 @@ public class BatalhaNavalScript : MonoBehaviour
     private GameObject objectClicked;
     private string piece;
     private string objectColor;
+
+    public GameObject boardFloor;
+    public GameObject boardWall;
+    public GameObject button1;
+    public GameObject button2;
+    public GameObject redSquare;
+    public GameObject greenSquare;
+    public GameObject instructions;
+    public GameObject back2scene;
+    public GameObject back2instructions;
 
     // Start is called before the first frame update
     void Start()
@@ -236,5 +247,46 @@ public class BatalhaNavalScript : MonoBehaviour
         {
             square.GetComponent<ChangeColor>().Green();
         }
+    }
+
+    public void back2Scene()
+    {
+        SceneManager.LoadScene("BoardSetup");
+    }
+
+    public void initiateGame()
+    {
+        boardFloor.SetActive(true);
+        boardWall.SetActive(true);
+        button1.SetActive(true);
+        button2.SetActive(true);
+        queen.SetActive(true);
+        pawn.SetActive(true);
+        bishop.SetActive(true);
+        knight.SetActive(true);
+        tower.SetActive(true);
+        redSquare.SetActive(true);
+        greenSquare.SetActive(true);
+        instructions.SetActive(false);
+        back2instructions.SetActive(true);
+        back2scene.SetActive(false);
+    }
+
+    public void back2Instructions()
+    {
+        boardFloor.SetActive(false);
+        boardWall.SetActive(false);
+        button1.SetActive(false);
+        button2.SetActive(false);
+        queen.SetActive(false);
+        pawn.SetActive(false);
+        bishop.SetActive(false);
+        knight.SetActive(false);
+        tower.SetActive(false);
+        redSquare.SetActive(false);
+        greenSquare.SetActive(false);
+        instructions.SetActive(true);
+        back2instructions.SetActive(false);
+        back2scene.SetActive(true);
     }
 }

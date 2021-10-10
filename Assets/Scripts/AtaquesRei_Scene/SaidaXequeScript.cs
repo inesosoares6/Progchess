@@ -28,6 +28,7 @@ public class SaidaXequeScript : MonoBehaviour
     Dictionary<string, GameObject> squares = new Dictionary<string, GameObject>();
     private bool squares_introduced = false;
     private GameObject objectSaidaXeque;
+    public GameObject board;
 
     private void Start()
     {
@@ -413,6 +414,7 @@ public class SaidaXequeScript : MonoBehaviour
         buttonPieces.SetActive(false);
         back2scenes.SetActive(false);
         back2pieces.SetActive(true);
+        board.SetActive(true);
         if (squares_introduced)
         {
             DeleteSquares_Saidaxeque();
@@ -431,5 +433,6 @@ public class SaidaXequeScript : MonoBehaviour
         buttonPieces.SetActive(true);
         back2scenes.SetActive(true);
         back2pieces.SetActive(false);
+        board.SetActive(false);
     }
 }
